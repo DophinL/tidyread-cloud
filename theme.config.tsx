@@ -6,9 +6,10 @@ import Image from "next/image";
 const config: DocsThemeConfig = {
     logo: (
         <Image
-            src="/images/tidyread_logo.png"
+            src="/images/logo_with_text.svg"
             alt=""
-            width={120}
+            width={148}
+            height={36}
         ></Image>
     ),
     // project: {
