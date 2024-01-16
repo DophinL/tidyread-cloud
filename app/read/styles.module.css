@@ -4,6 +4,9 @@
   transition: background-color 0.3s, color 0.3s;
   color: black;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (prefers-color-scheme: dark) {
