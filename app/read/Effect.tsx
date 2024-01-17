@@ -29,7 +29,7 @@ export default function Effect({
         setTimeout(() => {
           // 这里执行跳转
           window.location.href = decodeURIComponent(source_link);
-      }, 1000);
+      }, 300);
     }, [source_link, rss_link]);
     return null;
 }
