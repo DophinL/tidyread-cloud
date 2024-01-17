@@ -10,7 +10,7 @@ let initialized = false;
 export default function TrackProvider({
   children,
   config,
-  disabled,
+  disabled = false,
 }: {
   children: React.ReactNode;
   config: any;
@@ -41,8 +41,3 @@ export default function TrackProvider({
     </>
   );
 }
-
-TrackProvider.defaultProps = {
-  disabled: false,
-  enablePerformanceMarketing: false,
-};

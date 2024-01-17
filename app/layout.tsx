@@ -1,8 +1,13 @@
 import { TrackProvider } from "../components/TrackProvider";
-
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
 // These styles apply to every route in the application
-import './globals.css'
- 
+import "@/lib/globals.css";
+
+export const fontSans = FontSans({
+    subsets: ["latin"],
+    variable: "--font-sans",
+});
 
 interface RootLayoutProps {
     children: React.ReactNode;
@@ -10,9 +15,18 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en" suppressHydrationWarning className="ph-no-capture h-full">
+        <html
+            lang="en"
+            suppressHydrationWarning
+            className="ph-no-capture h-full"
+        >
             <head />
-            <body className="h-full">
+            <body
+                className={cn(
+                    "min-h-screen bg-background font-sans antialiased dark",
+                    fontSans.variable
+                )}
+            >
                 <TrackProvider
                     config={{
                         api_key:
