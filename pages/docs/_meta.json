@@ -9,8 +9,13 @@
   "share-your-digest": "Share Your Digest",
   "References": {
     "type": "separator",
-    "title": "References"
+    "title": "Reference"
   },
   "rss-pull": "RSS Pull",
-  "data-security": "Data Security"
+  "data-security": "Data Security",
+  "FAQ": {
+    "type": "separator",
+    "title": "FAQ"
+  },
+  "why-digest-fail": "Why Digest Fail"
 }

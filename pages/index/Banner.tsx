@@ -9,7 +9,7 @@ export default function Banner() {
                 >
                     Follow along on X(Twitter)
                 </a>
-                <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl gradient-text">
+                <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl gradient-text">
                     Lightweight reading flow powered by Raycast and AI
                 </h1>
                 <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -18,7 +18,7 @@ export default function Banner() {
                 <div className="space-x-4">
                     <a
                         className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 rounded-md"
-                        href="/login"
+                        href="/docs/getting-started"
                     >
                         Get Started
                     </a>
