@@ -44,7 +44,7 @@ export default function Features() {
                     <div className="space-y-2">
                         <h3 className="font-bold">Shrable</h3>
                         <p className="text-sm text-muted-foreground">
-                            The generated digests can be shared to others
+                            The generated digests can be shared to others with a link
                         </p>
                     </div>
                 </div>
