@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 // These styles apply to every route in the application
 import "@/lib/globals.css";
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
     subsets: ["latin"],
     variable: "--font-sans",
 });
