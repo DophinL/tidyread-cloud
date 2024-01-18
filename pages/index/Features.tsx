@@ -42,7 +42,7 @@ export default function Features() {
                 <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
                     <Share2 className="h-12 w-12" />
                     <div className="space-y-2">
-                        <h3 className="font-bold">Shrable</h3>
+                        <h3 className="font-bold">Sharable</h3>
                         <p className="text-sm text-muted-foreground">
                             The generated digests can be shared to others with a link
                         </p>
