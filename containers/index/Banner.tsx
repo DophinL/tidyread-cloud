@@ -1,6 +1,4 @@
-import { useRouter } from "next/router";
-import useLocale from "../useLocale";
-import { genUseTranslation } from "../translation";
+import { genUseTranslation } from "../../lib/translation";
 
 const locales = {
   'en-US': {

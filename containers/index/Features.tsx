@@ -1,5 +1,5 @@
 import { Calendar, Newspaper, Bot, Share2 } from "lucide-react";
-import { genUseTranslation } from "../translation";
+import { genUseTranslation } from "../../lib/translation";
 const locales = {
     "en-US": {
         "title-1": "Schedule",
