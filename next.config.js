@@ -4,6 +4,9 @@ const withNextra = require('nextra')({
 })
 
 module.exports = withNextra({
+  experimental: {
+    appDir: true,
+  },
   i18n: {
     locales: ['en-US', 'zh-CN'],
     defaultLocale: 'en-US'
