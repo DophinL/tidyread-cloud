@@ -1,21 +1,21 @@
 {
   "index": {
-    "title":"Homepage",
+    "title":"主页",
     "type": "page",
     "display": "hidden"
   },
   "docs": {
-    "title":"Docs",
+    "title":"帮助文档",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "联系我们 ↗",
     "type": "page",
     "href": "https://twitter.com/jaredliu_bravo",
     "newWindow": true
   },
   "about": {
-    "title": "About",
+    "title": "关于",
     "type": "page",
     "display": "hidden"
   },
