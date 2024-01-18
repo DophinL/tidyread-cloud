@@ -1,21 +1,21 @@
 {
   "Tutorials": {
     "type": "separator",
-    "title": "Tutorials"
+    "title": "教程"
   },
-  "getting-started": "Getting Started",
-  "empowered-with-ai": "Empowered With AI",
-  "automate-daily-digest": "Automate Daily Digest",
-  "share-your-digest": "Share Your Digest",
+  "getting-started": "开始上手",
+  "empowered-with-ai": "使用AI生成简报",
+  "automate-daily-digest": "自动化生成每日简报",
+  "share-your-digest": "分享你的简报",
   "References": {
     "type": "separator",
-    "title": "Reference"
+    "title": "参考"
   },
-  "rss-pull": "RSS Pull",
-  "data-security": "Data Security",
+  "rss-pull": "RSS 拉取",
+  "data-security": "数据安全",
   "FAQ": {
     "type": "separator",
     "title": "FAQ"
   },
-  "why-digest-failed": "Why Digest Failed"
+  "why-digest-failed": "为什么生成简报失败了？"
 }

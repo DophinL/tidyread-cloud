@@ -10,7 +10,7 @@ const locales = {
   'zh-CN': {
     'follow': '在 X(Twitter) 上关注我们的进展',
     'header': '基于 Raycast 和 AI 的轻量级阅读插件',
-    'description': '一款 Raycast 插件，可以用它安排您的日常阅读时间，并获得整洁的、由 AI 提供的摘要，以获得高效的阅读体验',
+    'description': '一款 Raycast 插件，可以用它安排你的日常阅读时间，并获得整洁的、由 AI 提供的摘要，以获得高效的阅读体验',
     'get-started': '开始使用',
   }
 }
