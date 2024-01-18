@@ -5,6 +5,10 @@ import Image from "next/image";
 
 const config: DocsThemeConfig = {
     darkMode: false,
+    i18n: [
+      { locale: 'en-US', text: 'English' },
+      { locale: 'zh-CN', text: '中文' },
+    ],
     project: {
       link: 'https://github.com/DophinL/raycast-extensions/tree/ext/tidyread---streamline-your-daily-reading/extensions/tidyread---streamline-your-daily-reading',
     },
