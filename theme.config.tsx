@@ -1,7 +1,6 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import Image from "next/image";
-// import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
     darkMode: false,
@@ -20,9 +19,6 @@ const config: DocsThemeConfig = {
             height={36}
         ></Image>
     ),
-    // project: {
-    //     link: "https://github.com/shuding/nextra-docs-template",
-    // },
     // chat: {
     //     link: "https://discord.com",
     // },
@@ -38,7 +34,7 @@ const config: DocsThemeConfig = {
             />
             <meta
                 property="keywords"
-                content="Tidyread, RSS digest, information summary, AI-powered content, news aggregation, efficient reading, personalized news, Docs, Help Center, Support"
+                content="Tidyread, Raycast, OpenAI, Moonshot, RSS digest, information summary, AI-powered content, news aggregation, efficient reading, personalized news, Docs, Help Center, Support"
             />
             <link rel="icon" href="/favicon.svg" />
         </>
