@@ -4,6 +4,10 @@ import Image from "next/image";
 // import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
+    darkMode: false,
+    project: {
+      link: 'https://github.com/DophinL/raycast-extensions/tree/ext/tidyread---streamline-your-daily-reading/extensions/tidyread---streamline-your-daily-reading',
+    },
     logo: (
         <Image
             src="/images/logo_with_text.svg"
@@ -36,15 +40,14 @@ const config: DocsThemeConfig = {
         </>
     ),
     docsRepositoryBase: "https://github.com/DophinL/tidyread-cloud/tree/main",
-    footer: {
-        text: "Build with ❤️",
-    },
+    // @ts-ignore
+    footer: false,
     useNextSeoProps() {
         // const { asPath } = useRouter();
         // if (asPath !== "/") {
-            return {
-                titleTemplate: "%s – Tidyread",
-            };
+        return {
+            titleTemplate: "%s – Tidyread",
+        };
         // }
     },
 };

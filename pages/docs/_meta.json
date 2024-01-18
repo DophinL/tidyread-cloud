@@ -1,3 +1,16 @@
 {
-  "intro": "Introduction"
+  "Tutorials": {
+    "type": "separator",
+    "title": "Tutorials"
+  },
+  "getting-started": "Getting Started",
+  "empowered-with-ai": "Empowered With AI",
+  "automate-daily-digest": "Automate Daily Digest",
+  "share-your-digest": "Share Your Digest",
+  "References": {
+    "type": "separator",
+    "title": "References"
+  },
+  "rss-pull": "RSS Pull",
+  "data-security": "Data Security"
 }

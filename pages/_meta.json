@@ -2,7 +2,9 @@
   "index": {
     "title":"Homepage",
     "type": "page",
-    "display": "hidden"
+    "display": "hidden",
+    "theme": {
+    }
   },
   "docs": {
     "title":"Docs",

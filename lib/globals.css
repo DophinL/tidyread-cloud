@@ -74,3 +74,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+.hide-timestamp + .nx-block {
+  display: none !important;
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom right, #E1E25A, #6DD47E, #0047AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
