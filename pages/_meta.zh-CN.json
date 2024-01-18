@@ -1,0 +1,25 @@
+{
+  "index": {
+    "title":"Homepage",
+    "type": "page",
+    "display": "hidden"
+  },
+  "docs": {
+    "title":"Docs",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/jaredliu_bravo",
+    "newWindow": true
+  },
+  "about": {
+    "title": "About",
+    "type": "page",
+    "display": "hidden"
+  },
+  "another": {
+    "display": "hidden"
+  }
+}

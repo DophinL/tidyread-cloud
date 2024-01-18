@@ -1,0 +1,21 @@
+{
+  "Tutorials": {
+    "type": "separator",
+    "title": "Tutorials"
+  },
+  "getting-started": "Getting Started",
+  "empowered-with-ai": "Empowered With AI",
+  "automate-daily-digest": "Automate Daily Digest",
+  "share-your-digest": "Share Your Digest",
+  "References": {
+    "type": "separator",
+    "title": "Reference"
+  },
+  "rss-pull": "RSS Pull",
+  "data-security": "Data Security",
+  "FAQ": {
+    "type": "separator",
+    "title": "FAQ"
+  },
+  "why-digest-failed": "Why Digest Failed"
+}
