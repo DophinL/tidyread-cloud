@@ -13,7 +13,7 @@ const locales = {
             "Automatically generated daily digests, delivered to you at your preferred time",
         "title-4": "Sharable",
         "description-4":
-            "The generated digests can be shared to others with a link",
+            "The generated digests and your sources can be shared to others with a link",
     },
     "zh-CN": {
         "title-1": "计划",
@@ -23,7 +23,7 @@ const locales = {
         "title-3": "自动化",
         "description-3": "自动生成每日摘要，并在你设定的时间推送给你",
         "title-4": "可分享",
-        "description-4": "生成的摘要可以通过链接分享给他人",
+        "description-4": "生成的摘要和你的阅读源可以通过链接分享给他人",
     },
 };
 
