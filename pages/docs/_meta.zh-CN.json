@@ -17,5 +17,6 @@
     "type": "separator",
     "title": "FAQ"
   },
-  "why-digest-failed": "为什么生成简报失败了？"
+  "why-digest-failed": "为什么生成简报失败了？",
+  "why-some-articles-not-summarized-by-ai": "为什么有些文章没有被 AI 概述？"
 }

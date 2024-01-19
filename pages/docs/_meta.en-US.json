@@ -17,5 +17,6 @@
     "type": "separator",
     "title": "FAQ"
   },
-  "why-digest-failed": "Why Digest Failed"
+  "why-digest-failed": "Why Digest Failed",
+  "why-some-articles-not-summarized-by-ai": "Why Some Articles Not Summarized By AI"
 }
