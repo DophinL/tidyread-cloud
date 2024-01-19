@@ -4,7 +4,7 @@ import { genUseTranslation } from "../../lib/translation";
 const locales = {
     "en-US": {
         follow: "Follow along on X(Twitter)",
-        header: "AI-Powered Lightweight Reading Extension\nInstant Access at Your Fingertips",
+        header: "AI-Powered Lightweight Reading Extension\nAccess At Your Fingertips",
         description:
             "A Raycast Extension designed to manage and schedule your daily reading which offers a modern reading experience through AI-powered digest",
         "get-started": "Get Started",
@@ -33,7 +33,7 @@ export default function Banner() {
                 >
                     {t("follow")}
                 </a>
-                <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl gradient-text whitespace-pre lg:leading-tight">
+                <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl gradient-text lg:leading-tight">
                     {t("header")}
                 </h1>
                 <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
