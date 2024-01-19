@@ -1,24 +1,30 @@
 import React from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
+import { DocsThemeConfig, LocaleSwitch } from "nextra-theme-docs";
 import Image from "next/image";
 
 const config: DocsThemeConfig = {
     darkMode: false,
     i18n: [
-      { locale: 'en-US', text: 'English' },
-      { locale: 'zh-CN', text: '中文' },
+        { locale: "en-US", text: "English" },
+        { locale: "zh-CN", text: "中文" },
     ],
     project: {
-      link: 'https://github.com/DophinL/raycast-extensions/tree/ext/tidyread---streamline-your-daily-reading/extensions/tidyread---streamline-your-daily-reading',
+        link: "https://github.com/DophinL/raycast-extensions/tree/ext/tidyread---streamline-your-daily-reading/extensions/tidyread---streamline-your-daily-reading",
     },
     logo: (
-        <Image
-            src="/images/logo_with_text.svg"
-            alt=""
-            width={148}
-            height={36}
-        ></Image>
+        <>
+            <Image
+                src="/images/logo_with_text.svg"
+                alt=""
+                width={148}
+                height={36}
+            ></Image>
+            {/* <LocaleSwitch className="ml-5"></LocaleSwitch> */}
+        </>
     ),
+    sidebar: {
+      toggleButton: true
+    },
     // chat: {
     //     link: "https://discord.com",
     // },

@@ -1,7 +1,50 @@
+import { Callout } from "nextra/components";
+
 ## 前提
-Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast ，可以在[这里](https://raycast.com/)下载。
+
+Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast ，强烈推荐你试试。可以在[这里](https://raycast.com/)下载。
 
 ## 安装
+
 安装 [Tidyread Raycast 插件](https://www.raycast.com/jaredliu233/tidyread---streamline-your-daily-reading)
 
+## 插件简介
+
+![commands](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_commands.png)
+
+-   `Daily Read`: 最常用的命令，可以查看今日阅读及简报。
+-   `Manage Source List`: 次常用的命令，用来管理阅读源。
+-   `Auto Digest`: 如果你希望每天定时收到自动生成的简报，可以 Enter 执行一次，后续会自动开启直到你手动关闭。
+-   `Digest List`: 这里可以查看所有已生成的简报。
+-   `Add Source`: 添加阅读源，也可以直接在 `Manage Source List` 命令中进行。
+
 ## 添加你的第一个阅读源
+
+![empty_list](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_empty_list.png)
+
+进入到 `Manage Source List` 命令，你会看到一个空列表，点按 Enter 会触发创建阅读源。
+
+![add_source](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_add_source.png)
+
+只有 URL 和 Title 是必填项，其他的都是可选的。
+通过 Schedule 字段，你可以规划该阅读源的阅读时间，它会出现在那一天的 `Daily Read` 中。
+
+<Callout type="info">
+    推荐你填写 RSS Link，只有这样，这个阅读源才能用于生成简报。
+</Callout>
+
+## 尝试生成简报
+
+![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_empty_digest.png)
+
+进入 `Daily Read` 命令， 点按 Enter 键，等待简报生成。
+
+![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_has_digest.png)
+
+生成完毕后，你可以在 `Daily Read` 中看到简报。点击 Enter 键，可以查看简报的详情:
+
+![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/todays_digest.png)
+
+由于目前没有设置 AI 相关的配置，所以简报中的 所有内容都是原始内容，并没有经过 AI 摘要。
+
+到此为止，你已经用到了 Tidyread 的基础功能，如果你希望进一步提升阅读体验，请继续往下看。
