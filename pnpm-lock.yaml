@@ -11,6 +11,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   lucide-react:
     specifier: ^0.311.0
     version: 0.311.0(react@18.2.0)
@@ -40,6 +43,9 @@ dependencies:
     version: 1.0.7(tailwindcss@3.4.1)
 
 devDependencies:
+  '@types/lodash':
+    specifier: ^4.14.202
+    version: 4.14.202
   '@types/node':
     specifier: 18.11.10
     version: 18.11.10
@@ -693,6 +699,10 @@ packages:
   /@types/katex@0.16.7:
     resolution: {integrity: sha512-HMwFiRujE5PjrgwHQ25+bsLJgowjGjm5Z8FVSf0N6PwgJrwxH0QxzHYDcKsTfV3wva0vzrpqMTJS2jXPr5BMEQ==}
     dev: false
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
+    dev: true
 
   /@types/mdast@3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}

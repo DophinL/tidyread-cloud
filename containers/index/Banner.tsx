@@ -4,9 +4,9 @@ import { genUseTranslation } from "../../lib/translation";
 const locales = {
     "en-US": {
         follow: "Follow along on X(Twitter)",
-        header: "AI-Powered Lightweight Reading Extension\nAccess At Your Fingertips",
+        header: "AI-Powered Reading Extension\nInstant Access At Your Fingertips",
         description:
-            "A Raycast Extension designed to manage and schedule your daily reading which offers a modern reading experience through AI-powered digest",
+            "A Raycast Extension designed to manage and schedule your daily reading which offers a modern reading experience through AI-Powered digest",
         "get-started": "Get Started",
     },
     "zh-CN": {
