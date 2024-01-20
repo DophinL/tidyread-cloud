@@ -6,7 +6,7 @@ const locales = {
         follow: "Follow along on X(Twitter)",
         header: "AI-Powered Reading Extension\nInstant Access At Your Fingertips",
         description:
-            "A Free Raycast Extension designed to manage and schedule your daily reading which offers a modern reading experience through AI-Powered digest",
+            "A Free Raycast Extension to manage and schedule your daily reading which offers a modern reading experience through AI-Powered digest",
         "get-started": "Get Started",
     },
     "zh-CN": {
