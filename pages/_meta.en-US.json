@@ -8,6 +8,12 @@
     "title":"Docs",
     "type": "page"
   },
+  "buycoffee": {
+    "title":"Buy me a coffee",
+    "type": "page",
+    "href": "https://www.buymeacoffee.com/jaredliu",
+    "newWindow": true
+  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",

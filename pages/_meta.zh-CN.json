@@ -8,8 +8,14 @@
     "title":"帮助文档",
     "type": "page"
   },
+  "buycoffee": {
+    "title":"请我喝咖啡",
+    "type": "page",
+    "href": "https://www.buymeacoffee.com/jaredliu",
+    "newWindow": true
+  },
   "contact": {
-    "title": "联系我们 ↗",
+    "title": "联系我 ↗",
     "type": "page",
     "href": "https://twitter.com/jaredliu_bravo",
     "newWindow": true
