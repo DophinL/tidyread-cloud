@@ -10,6 +10,7 @@
   "share-your-digest": "分享你的简报",
   "share-or-export-your-sources": "分享或者导出你的阅读源",
   "batch-import-sources": "批量导入阅读源",
+  "more-effective": "再高效一点",
   "References": {
     "type": "separator",
     "title": "参考"
@@ -21,5 +22,6 @@
     "title": "FAQ"
   },
   "why-digest-failed": "为什么生成简报失败了？",
-  "why-some-articles-not-summarized-by-ai": "为什么有些文章没有被 AI 概述？"
+  "why-some-articles-not-summarized-by-ai": "为什么有些文章没有被 AI 概述？",
+  "why-auto-digest-not-in-time": "为什么自动化生成的简报不准时？"
 }

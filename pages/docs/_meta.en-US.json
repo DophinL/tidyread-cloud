@@ -10,6 +10,7 @@
   "share-your-digest": "Share Your Digest",
   "share-or-export-your-sources": "Share or Export Your Sources",
   "batch-import-sources": "Batch Import Sources",
+  "more-effective": "Be More Effective",
   "References": {
     "type": "separator",
     "title": "Reference"
@@ -21,5 +22,6 @@
     "title": "FAQ"
   },
   "why-digest-failed": "Why Digest Failed",
-  "why-some-articles-not-summarized-by-ai": "Why Some Articles Not Summarized By AI"
+  "why-some-articles-not-summarized-by-ai": "Why Some Articles Not Summarized By AI",
+  "why-auto-digest-not-in-time": "Why Auto Digest Not In Time?"
 }
