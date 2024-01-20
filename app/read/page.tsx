@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 const Page = ({
     searchParams,
 }: {
-    searchParams: { [key: string]: string | string[] | undefined };
+    searchParams: { [key: string]: string | undefined };
 }) => {
-    const { source_link, rss_link } = searchParams;
+    const { source_link, rss_link, status } = searchParams;
 
     return (
         <div className={styles.container}>
@@ -27,8 +27,9 @@ const Page = ({
             <h1>Redirecting... </h1>
             <p>Please wait a moment</p>
             <Effect
-                source_link={source_link as string}
-                rss_link={rss_link as string}
+                source_link={source_link}
+                rss_link={rss_link}
+                status={status}
             />
         </div>
     );
