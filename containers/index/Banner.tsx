@@ -6,14 +6,14 @@ const locales = {
         follow: "Follow along on X(Twitter)",
         header: "AI-Powered Reading Extension\nInstant Access At Your Fingertips",
         description:
-            "A Raycast Extension designed to manage and schedule your daily reading which offers a modern reading experience through AI-Powered digest",
+            "A Free Raycast Extension designed to manage and schedule your daily reading which offers a modern reading experience through AI-Powered digest",
         "get-started": "Get Started",
     },
     "zh-CN": {
         follow: "在 X(Twitter) 上关注进展",
         header: "AI驱动的轻量阅读插件\n弹指间即可唤起",
         description:
-            "一款 Raycast 插件，用它来管理和计划你的日常阅读。\n并通过 AI 摘要、整洁的简报使你获得更现代的阅读体验",
+            "一款免费的 Raycast 插件，用它来管理和计划你的日常阅读。\n并通过 AI 摘要、整洁的简报使你获得更现代的阅读体验",
         "get-started": "开始使用",
     },
 };

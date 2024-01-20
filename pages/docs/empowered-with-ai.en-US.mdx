@@ -1,0 +1,65 @@
+import { Callout } from "nextra/components";
+
+In the previous section, we mentioned that without any configuration, the content in the digest defaults to the original content.
+
+If we summarize this content using AI, it will further enhance our reading efficiency.
+
+If there's an `AI Summarized` tag in the digest, it means the digest has been summarized using AI.
+
+## Configuring AI
+
+First, go to the `Settings Page` => `Extensions`, and find Tidyread:
+![setting](https://tidyread.s3.us-west-2.amazonaws.com/setting.png)
+
+### OpenAI
+
+By default, OpenAI is used as the provider for AI summary. Configuration is as follows:
+![openai](https://tidyread.s3.us-west-2.amazonaws.com/openai_config.png)
+
+### Raycast AI
+
+Configuration is as follows:
+![raycast](https://tidyread.s3.us-west-2.amazonaws.com/raycast_config.png)
+
+<Callout type="warning">
+    If you are not a `Raycast Pro` member, you will be unable to use Raycast AI.
+</Callout>
+<Callout type="info">
+    If your membership does not include gpt-4, using gpt-4 will automatically downgrade to 3.5.
+</Callout>
+
+### Moonshot AI
+
+Configuration is as follows:
+
+![raycast](https://tidyread.s3.us-west-2.amazonaws.com/moonshot_config.png)
+
+## Summary Prompt
+
+The default summary is:
+
+```md copy
+## Target
+
+summarize the contents
+
+## Requirements
+
+-   Output a minimum of 50 characters, maximum of 200 characters
+
+-   Remove from the summary any references to author publicity and promotion.
+
+-   Output the summarized content in a straightforward manner, without restating the requirements.
+
+## Respond Language
+
+Respond in the language of the user input content, not the language of the prompt itself.
+```
+
+You can customize the summary prompt in the configuration:
+![prompt](https://tidyread.s3.us-west-2.amazonaws.com/prompt_setting.png)
+
+## Considerations
+
+If you find that some articles fail to summarize, it is usually due to exceeding the rate limit. Try adjusting the API Concurrency to `1`:
+![api_concur](https://tidyread.s3.us-west-2.amazonaws.com/api_concur.png)

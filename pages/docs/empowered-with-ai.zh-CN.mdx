@@ -1,0 +1,65 @@
+import { Callout } from "nextra/components";
+
+上一节我们提到，如果不做任何配置，简报中的内容默认为原始内容。
+
+如果我们通过 AI 对这些内容进行摘要，会进一步提升我们的阅读效率。
+
+若简报中存在 `AI Summarized` 标记，则说明该简报已经使用 AI 进行了摘要。
+
+## 配置 AI
+
+首先进入到 `设置页面` => `插件`，找到 Tidyread：
+![setting](https://tidyread.s3.us-west-2.amazonaws.com/setting.png)
+
+### OpenAI
+
+默认使用 OpenAI 作为 AI 摘要的提供者。配置如下：
+![openai](https://tidyread.s3.us-west-2.amazonaws.com/openai_config.png)
+
+### Raycast AI
+
+配置如下：
+![raycast](https://tidyread.s3.us-west-2.amazonaws.com/raycast_config.png)
+
+<Callout type="warning">
+    如果您不是 `Raycast Pro` 会员，将无法使用 Raycast AI。
+</Callout>
+<Callout type="info">
+    如果您购买的会员没有包含 gpt-4，使用 gpt-4 会自动降级到 3.5。
+</Callout>
+
+### Moonshot AI
+
+配置如下：
+
+![raycast](https://tidyread.s3.us-west-2.amazonaws.com/moonshot_config.png)
+
+## 摘要 Prompt
+
+默认的摘要为：
+
+```md copy
+## Target
+
+summarize the contents
+
+## Requirements
+
+-   Output a minimum of 50 characters, maximum of 200 characters
+
+-   Remove from the summary any references to author publicity and promotion.
+
+-   Output the summarized content in a straightforward manner, without restating the requirements.
+
+## Respond Language
+
+Respond in the language of the user input content, not the language of the prompt itself.
+```
+
+你可以在配置中定制摘要的 Prompt：
+![prompt](https://tidyread.s3.us-west-2.amazonaws.com/prompt_setting.png)
+
+## 注意事项
+
+如果发现有些文章摘要失败了，一般是因为超出了频率限制。可以尝试调整 API Concurrency 为 `1`：
+![api_concur](https://tidyread.s3.us-west-2.amazonaws.com/api_concur.png)
