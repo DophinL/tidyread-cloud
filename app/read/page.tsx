@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "read - Tidyread",
+    title: "read | Tidyread",
     description: "read article redirect page",
 };
 
