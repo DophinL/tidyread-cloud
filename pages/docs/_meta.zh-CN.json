@@ -3,10 +3,13 @@
     "type": "separator",
     "title": "教程"
   },
+  "introduction": "简介",
   "getting-started": "开始上手",
   "empowered-with-ai": "使用AI生成简报",
   "automate-daily-digest": "自动化生成每日简报",
   "share-your-digest": "分享你的简报",
+  "share-or-export-your-sources": "分享或者导出你的阅读源",
+  "batch-import-sources": "批量导入阅读源",
   "References": {
     "type": "separator",
     "title": "参考"
