@@ -1,0 +1,24 @@
+为了自动化生成简报并且推送给我们，我们需要需要做两件事情：
+
+-   设定推送时间
+-   开启自动推送
+
+## 设定推送时间
+
+前往 Tidyread Extension 设置页面，找到 `Notification Time` 表单项，填入你想要的每日推送时间，比如 `9:30am`，`21:00` 等等:
+![notify_time](https://tidyread.s3.us-west-2.amazonaws.com/notify_time.png)
+
+## 开启自动推送
+
+打开 Raycast 搜索 Tidyread `Auto Digest` 命令，点按 `Enter` 键，即可依据前面设定的推送时间开启自动推送:
+![active_auto_digest](https://tidyread.s3.us-west-2.amazonaws.com/active_auto_digest.png)
+
+## 限制
+
+通知默认只会悬浮一会儿。这意味着它们会显示在系统上，一两秒后就会从屏幕上消失，只停留在通知中心。
+
+要改变系统通知的行为，使其保留在屏幕上直到你将其删除，你需要做两件事：
+
+> 1.打开 `系统偏好设置`，进入 `通知与焦点`。
+
+> 2.进入 `脚本编辑器`，将通知类型从 `横幅` 改为 `警报`。

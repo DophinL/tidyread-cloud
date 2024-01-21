@@ -1,0 +1,24 @@
+To automate the generation and pushing of digests, we need to do two things:
+
+-   Set the push time.
+-   Enable automatic push.
+
+## Setting the Push Time
+
+Go to the Tidyread Extension settings page, find the `Notification Time` field, and enter your desired daily push time, such as `9:30am`, `21:00`, etc.:
+![notify_time](https://tidyread.s3.us-west-2.amazonaws.com/notify_time.png)
+
+## Enabling Automatic Push
+
+Open Raycast, search for the Tidyread `Auto Digest` command, press the `Enter` key, and you can start automatic push according to the push time set earlier:
+![active_auto_digest](https://tidyread.s3.us-west-2.amazonaws.com/active_auto_digest.png)
+
+## Limitations
+
+Notifications will only hover for a while by default. This means they will show up on the system and disappear from the screen after a second or two, remaining only in the notification center.
+
+To change the behavior of system notifications, making them stay on screen until you dismiss them, you need to do two things:
+
+> 1. Open `System Preferences`, go to `Notifications & Focus`.
+
+> 2. Enter `Script Editor`, change the notification type from `Banner` to `Alerts`.
