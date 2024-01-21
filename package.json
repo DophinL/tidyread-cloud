@@ -6,7 +6,8 @@
     "dev": "next dev -p 4390",
     "build": "next build",
     "start": "next start",
-    "i18n": "tsx scripts/i18n.ts"
+    "i18n": "tsx scripts/i18n.ts",
+    "postbuild": "echo 'testlzyzy' && next-sitemap && rm -rf .next/cache"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "@types/lodash": "^4.14.202",
     "@types/node": "18.11.10",
     "autoprefixer": "^10.4.16",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.7.0",
