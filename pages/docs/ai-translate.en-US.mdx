@@ -1,0 +1,23 @@
+By default, the title and content of the digest maintain the same language as the original text.
+
+If you have set up AI, you can go to the configuration page and set the `Preferred Language` form field. The title and content of the digest will automatically be translated into the language you have set:
+
+![preferred_lang_setting](https://tidyread.s3.us-west-2.amazonaws.com/preferred_lang_setting.png)
+
+After configuration, regenerate the digest to see the effect:
+![digest_in_preferred_lang](https://tidyread.s3.us-west-2.amazonaws.com/digest_in_preferred_lang.png)
+
+## Notes
+
+The reason why the article content matches the language you have set is due to the default `Summarize Prompt` which contains the `{{lang}}` variable:
+
+```md copy
+Summarize the content within 50 to 200 characters, excluding any references to author publicity and promotion. The summary should be straightforward and in {{lang}}.
+```
+
+During the summarization execution, `{{lang}}` will be replaced with the language you have set.
+If you have customized the prompt, the translation of the content will be based on your prompt.
+
+## Next Steps
+
+So far, the digest is generated manually and requires waiting for some time. Is it possible to automatically generate the digest at a fixed time every day and push it to me? Please see the next section.

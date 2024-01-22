@@ -25,7 +25,8 @@ Configuration is as follows:
     If you are not a `Raycast Pro` member, you will be unable to use Raycast AI.
 </Callout>
 <Callout type="info">
-    If your membership does not include gpt-4, using gpt-4 will automatically downgrade to 3.5.
+    If your membership does not include gpt-4, using gpt-4 will automatically
+    downgrade to 3.5.
 </Callout>
 
 ### Moonshot AI
@@ -45,10 +46,14 @@ Summarize the content within 50 to 200 characters, excluding any references to a
 You can customize the summary prompt in the configuration:
 ![prompt](https://tidyread.s3.us-west-2.amazonaws.com/prompt_setting.png)
 
-## Next Step
-Once the configuration is complete, try generating a digest again, and you will be able to see the effect of AI summarization.
+## Verify The Effect
 
-If you find that some article summaries fail, it is usually due to exceeding the frequency limit. Try adjusting the API Concurrency to `1`:
+Once configured, try generating the digest again to see the effect:
+
+![ai_summarized](https://tidyread.s3.us-west-2.amazonaws.com/digest_with_ai.png)
+
+If you find that some article summaries fail, it's usually because the frequency limit is exceeded. Try modifying the API Concurrency to `1`:
+
 ![api_concur](https://tidyread.s3.us-west-2.amazonaws.com/api_concur.png)
 
-Up to this point, digests are still generated manually and require a waiting period. Is it possible to have the digests generated automatically at a set time each day and pushed to me? Please see the next chapter.
+As we can see from the effect just now, the title and content of the article in the digest are in the language of the original, is it possible to translate it into a language we are more familiar with? Please see the next section.

@@ -1,0 +1,22 @@
+默认情况，简报的标题和内容的语言跟原文保持一致。
+
+如果你设置了 AI，则可以去配置页面设定 `Preferred Language` 表单项，简报的标题和内容会自动翻译成你设定的语言：
+
+![preferred_lang_setting](https://tidyread.s3.us-west-2.amazonaws.com/preferred_lang_setting.png)
+
+配置后，重新生成简报，即可看到效果：
+![digest_in_preferred_lang](https://tidyread.s3.us-west-2.amazonaws.com/digest_in_preferred_lang.png)
+
+## 注意事项
+
+文章内容之所以会跟你设定的语言一致，其魔法在于默认的 `Summarize Prompt` 中的 `{{lang}}` 变量：
+
+```md copy
+Summarize the content within 50 to 200 characters, excluding any references to author publicity and promotion. The summary should be straightforward and in {{lang}}.
+```
+
+在执行摘要时，`{{lang}}` 会被替换成你设定的语言。
+如果你自定义了 prompt，内容的翻译将基于你的 prompt。
+
+## 下一步
+到目前为止，还是通过手动的方式生成简报，需要等待一段时间，有没有可能在每天固定时间，自动生成简报并且推送给我呢？请看下一章节。

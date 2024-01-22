@@ -45,10 +45,11 @@ Summarize the content within 50 to 200 characters, excluding any references to a
 你可以在配置中定制摘要的 Prompt：
 ![prompt](https://tidyread.s3.us-west-2.amazonaws.com/prompt_setting.png)
 
-## 下一步
-配置完毕后，尝试再生成一次简报，就可以看到 AI 摘要的效果了。
+## 验证效果
+配置完毕后，尝试再生成一次简报，就可以看到 AI 摘要的效果了：
+![ai_summarized](https://tidyread.s3.us-west-2.amazonaws.com/digest_with_ai.png)
 
 如果发现有些文章摘要失败了，一般是因为超出了频率限制。可以尝试调整 API Concurrency 为 `1`：
 ![api_concur](https://tidyread.s3.us-west-2.amazonaws.com/api_concur.png)
 
-到目前为止，还是通过手动的方式生成简报，需要等待一段时间，有没有可能在每天固定时间，自动生成简报并且推送给我呢？请看下一章节。
+从刚才的效果我们可以看出来，简报中文章的标题和内容采用的是原文的语言，有没有可能翻译成我们更熟悉的语言呢？请看下一章节。
