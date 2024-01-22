@@ -1,0 +1,18 @@
+Currently, there are several possibilities:
+
+## Network Blocking
+
+Fetching RSS data and calling AI interfaces require network access. If the network is blocked, you can try using a proxy:
+![http_proxy](https://tidyread.s3.us-west-2.amazonaws.com/http_proxy.png)
+
+## Excessive Execution Time
+
+If the execution time is too long, it may be because there are too many articles fetched from RSS feeds, and each article requires an AI summary. Try reducing the number of RSS feeds, or decrease the maximum number of articles fetched per feed:
+![max_items_per_feed](https://tidyread.s3.us-west-2.amazonaws.com/max_items_per_feed.png)
+
+You could also try increasing the concurrency of the API calls:
+![api_concur_up](https://tidyread.s3.us-west-2.amazonaws.com/api_concur_up.png)
+
+## Others
+
+If there are other issues, please invoke Actions with any command, click on `Bug Report` to provide feedback, or directly DM me on [X(Twitter)](https://x.com/jaredliu_bravo).

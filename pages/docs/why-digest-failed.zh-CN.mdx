@@ -1,0 +1,18 @@
+目前发现有以下几种可能性：
+
+## 网络屏蔽
+
+拉取 RSS 数据以及调用 AI 接口，都需要经过网络，如果网络被屏蔽，可以尝试使用代理：
+![http_proxy](https://tidyread.s3.us-west-2.amazonaws.com/http_proxy.png)
+
+## 执行时间过长
+
+如果执行时间过长，可能是因为 RSS 拉取的文章数量太多，每一篇文章都需要经过 AI 摘要。可以尝试减少 RSS 源的数量，或者减少每个 RSS 源拉取的文章上限：
+![max_items_per_feed](https://tidyread.s3.us-west-2.amazonaws.com/max_items_per_feed.png)
+
+也可以尝试提升 API 的并发数量：
+![api_concur_up](https://tidyread.s3.us-west-2.amazonaws.com/api_concur_up.png)
+
+## 其它
+
+如果还有其它情况，请在任意命令唤起 Actions，点击 `Bug Report` 进行反馈，或者直接在 [X(Twitter) 上 DM 我](https://x.com/jaredliu_bravo)。
