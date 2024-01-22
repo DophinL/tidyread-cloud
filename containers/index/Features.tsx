@@ -4,26 +4,26 @@ const locales = {
     "en-US": {
         "title-1": "Schedule",
         "description-1":
-            "Schedule your reading, instead of trying to finish it all in one day",
-        "title-2": "AI-Digest",
+            "Schedule your reading time, no need to finish all reading in one day",
+        "title-2": "AI-Powered",
         "description-2":
-            "Accelerate your daily reading with AI-Powered digest, helping you save time",
+            "AI-generated article summaries, translated titles and contents, to speed up your reading",
         "title-3": "Automate",
         "description-3":
-            "Automatically generated daily digests, delivered to you at your preferred time",
+            "Automatically generate daily digests and push them to you at your preferred time",
         "title-4": "Sharable",
         "description-4":
-            "The generated digests and your sources can be shared to others with a link",
+            "Generated digests and your reading sources can be shared with others via links",
     },
     "zh-CN": {
         "title-1": "计划",
-        "description-1": "安排你的阅读时间，而非在一天内完成所有阅读",
-        "title-2": "AI摘要",
-        "description-2": "AI摘要可以帮助你加速日常阅读，节省时间",
+        "description-1": "安排你的阅读时间，不必在一天内完成所有阅读",
+        "title-2": "AI提效",
+        "description-2": "AI 生成文章摘要，并翻译标题和内容，加速你的阅读",
         "title-3": "自动化",
-        "description-3": "自动生成每日摘要，并在你设定的时间推送给你",
+        "description-3": "自动生成每日简报，并在你设定的时间推送给你",
         "title-4": "可分享",
-        "description-4": "生成的摘要和你的阅读源可以通过链接分享给他人",
+        "description-4": "生成的简报和你的阅读源，可以通过链接分享给他人",
     },
 };
 
