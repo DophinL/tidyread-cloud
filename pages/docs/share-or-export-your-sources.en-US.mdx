@@ -1,0 +1,49 @@
+Sometimes, we might be curious about what others are reading, or we might want to share our own reading list. In such cases, we can share or export our reading sources.
+
+This functionality still relies on the support of [WriteFreely](https://writefreely.org/). For specific configuration methods, please refer to the content in the previous chapter.
+
+How to use it: Enter the `Manage Source List` command, invoke Actions for any reading source, and select one of the following operations:
+![export_sources](https://tidyread.s3.us-west-2.amazonaws.com/export_sources.png)
+
+If sharing, a `WriteFreely` link will be generated; if exporting, the content must be manually copied.
+
+The format of the exported content is as follows:
+
+```json copy
+[
+    {
+        "rssLink": "https://www.producthunt.com/feed",
+        "title": "PH Deck",
+        "schedule": "custom",
+        "timeSpan": "1",
+        "url": "https://www.phdeck.com/",
+        "tags": [],
+        "favicon": "https://www.phdeck.com/favicon.ico",
+        "customDays": ["Friday"]
+    },
+    {
+        "schedule": "everyday",
+        "title": "The New York Times",
+        "timeSpan": "1",
+        "tags": [],
+        "rssLink": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+        "url": "https://www.nytimes.com",
+        "favicon": "https://www.nytimes.com/vi-assets/static-assets/favicon-d2483f10ef688e6f89e23806b9700298.ico",
+        "customDays": ["Friday"]
+    },
+    {
+        "schedule": "everyday",
+        "rssLink": "https://news.ycombinator.com/rss",
+        "tags": [],
+        "url": "https://news.ycombinator.com/",
+        "timeSpan": "1",
+        "title": "Hacker News",
+        "favicon": "https://news.ycombinator.com/y18.svg",
+        "customDays": ["Friday"]
+    }
+]
+```
+
+## Next Steps
+
+With the ability to export, naturally, there's also the possibility to import. In the next chapter, we will introduce how to import.

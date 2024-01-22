@@ -1,0 +1,49 @@
+有时候，我们会希了解他人在读些什么，也可能想分享自己的阅读清单，这时候我们就可以分享或导出我们的阅读源。
+
+这个功能仍旧依赖于 [WriteFreely](https://writefreely.org/) 的支持，具体配置方式，可查看上一章节的内容。
+
+使用方式是：进入到 `Manage Source List` 命令，对任意阅读源唤起 Actions，选择以下操作：
+![export_sources](https://tidyread.s3.us-west-2.amazonaws.com/export_sources.png)
+
+若是分享，则会生成一个 `WriteFreely` 链接；若是导出，则需要手动复制内容。
+
+导出的内容格式如下：
+
+```json copy
+[
+    {
+        "rssLink": "https://www.producthunt.com/feed",
+        "title": "PH Deck",
+        "schedule": "custom",
+        "timeSpan": "1",
+        "url": "https://www.phdeck.com/",
+        "tags": [],
+        "favicon": "https://www.phdeck.com/favicon.ico",
+        "customDays": ["Friday"]
+    },
+    {
+        "schedule": "everyday",
+        "title": "The New York Times",
+        "timeSpan": "1",
+        "tags": [],
+        "rssLink": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+        "url": "https://www.nytimes.com",
+        "favicon": "https://www.nytimes.com/vi-assets/static-assets/favicon-d2483f10ef688e6f89e23806b9700298.ico",
+        "customDays": ["Friday"]
+    },
+    {
+        "schedule": "everyday",
+        "rssLink": "https://news.ycombinator.com/rss",
+        "tags": [],
+        "url": "https://news.ycombinator.com/",
+        "timeSpan": "1",
+        "title": "Hacker News",
+        "favicon": "https://news.ycombinator.com/y18.svg",
+        "customDays": ["Friday"]
+    }
+]
+```
+
+## 下一步
+
+有导出，当然也可以导入。下一章节我们将介绍如何导入。
