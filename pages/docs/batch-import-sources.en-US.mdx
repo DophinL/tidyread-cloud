@@ -1,18 +1,46 @@
 import { Callout } from "nextra/components";
 
-In the previous chapter, we discussed how to export. Importing involves using the exported data.
+## Importing Using Exported Data
 
-The method is to enter the `Manage Source List` command, invoke Actions for any reading source, and perform the following operation:
+The previous chapter discussed how to export data. Importing involves using the exported data.
+
+The method is to enter the `Manage Source List` command, invoke Actions for any reading source, and perform the following operations:
 
 ![batch_import_sources_action](https://tidyread.s3.us-west-2.amazonaws.com/batch_import_sources_action.png)
 
-Then proceed with the import:
+After copying the exported data into the textarea, use `cmd + Enter` to save:
 ![batch_import_sources](https://tidyread.s3.us-west-2.amazonaws.com/batch_import_sources.png)
 
 <Callout type="info">
-    The validation process will take some time (mainly because RSS Link
-    validation is time-consuming), so please be patient.
+    Validation will take some time (mainly due to RSS Link verification), please be patient.
 </Callout>
 <Callout type="warning">
-    If import failed, please refer to the [doc](https://www.tidyread.info/docs/why-digest-failed#network-blocking).
+    If the import fails, please refer to the [documentation](https://www.tidyread.info/docs/why-digest-failed#network-blocking) for troubleshooting.
 </Callout>
+
+## Manual Entry for Import
+
+Normally, reading sources are entered through the `Add Source` form. If you find this cumbersome and want to import in bulk, you can refer to the following type. Content written in the textarea needs to conform to `Source[]` (it must be an array):
+
+```typescript
+export interface Source {
+    url: string;
+    title: string;
+    schedule: "everyday" | "custom";
+    customDays?: (
+        | "Mondy"
+        | "Tuesday"
+        | "Wednesday"
+        | "Thursday"
+        | "Friday"
+        | "Saturday"
+        | "Sunday"
+    )[];
+    rssLink?: string;
+    // Time span of the content pulled by rss, default is 1, means one day
+    timeSpan?: string;
+    tags: string[];
+    // favicon url
+    favicon?: string;
+}
+```
