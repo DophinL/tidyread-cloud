@@ -25,6 +25,7 @@
     },
     "where-to-find-rss": "在哪里找RSS？",
     "why-digest-failed": "为什么生成简报失败了？",
-    "why-some-articles-not-summarized-by-ai": "为什么有些文章没有被 AI 概述？",
+    "why-some-articles-fail-to-be-summarized": "为什么有些文章摘要失败了?",
+    "why-some-articles-not-summarized-by-ai": "为什么有些文章没有被 AI 摘要？",
     "why-auto-digest-not-in-time": "为什么自动化生成的简报不准时？"
 }
