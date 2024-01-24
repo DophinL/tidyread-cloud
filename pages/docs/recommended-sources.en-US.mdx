@@ -1,0 +1,16 @@
+import { Pre, Code } from "nextra/components";
+import recommendedSources from "../../public/recommended_data.json";
+
+When you first enter Tidyread's `Manage Source List` command, you will be directed to the `Onboarding` page:
+
+![onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/onboard_guide.png)
+
+Tidyread will automatically generate recommended reading sources based on the information you provide.
+
+Below are the current recommended sources. If needed, you can copy any of the `sources` arrays from a section and import it in the `Manage Source List` command:
+
+<Pre lang="json" hasCopyCode>
+    <Code lang="json">{JSON.stringify(recommendedSources, null, 2)}</Code>
+</Pre>
+
+If you have any questions or suggestions, feel free to contact me directly on [X(Twitter)](https://x.com/jaredliu_bravo):
