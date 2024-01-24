@@ -8,13 +8,28 @@ Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast �
 
 安装 [Tidyread Raycast 插件](https://www.raycast.com/jaredliu233/tidyread---streamline-your-daily-reading)
 
+## 启动
+
+进入到 `Manage Source List` 命令，为了帮助用户更快上手，你会看到一个启动引导：
+![onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/onboard_guide.png)
+
+选择你感兴趣领域提交后，Tidyread 会自动为你添加一些阅读源，并且跳转到 `Daily Read` 命令（你最常用的命令）自动生成一份简报：
+![digest_generating](https://tidyread.s3.us-west-2.amazonaws.com/digest_generating.png)
+
+如果你不喜欢推荐的阅读源，可以跳过这个步骤：
+![skip_onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/skip_onboard_guide.png)
+
 ## 添加你的第一个阅读源
+
+如果你跳过了引导，则需要手动添加阅读源，你会看到一个空列表：
 
 ![empty_list](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_empty_list.png)
 
-进入到 `Manage Source List` 命令，你会看到一个空列表，点按 Enter 会触发创建阅读源。
+点按 Enter 会触发创建阅读源：
 
 ![add_source](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_add_source.png)
+
+如果经过引导，会自动创建一些阅读源，那么你在`Manage Source List`中可以自行通过`cmd + N` 创建订阅源，仍然会进入到上图的界面。
 
 只有 URL 和 Title 是必填项，其他的都是可选的。
 通过 Schedule 字段，你可以规划该阅读源的阅读时间，它会出现在那一天的 `Daily Read` 中。
@@ -26,15 +41,15 @@ Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast �
 
 ## 尝试生成简报
 
+进入 `Daily Read` 命令， 如果跳过了启动引导，可以看到简报尚未生成：
+
 ![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_empty_digest.png)
 
-进入 `Daily Read` 命令， 点按 Enter 键，等待简报生成。
-
-![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_has_digest.png)
+点按 Enter 键，等待简报生成：
+![daily_read_has_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_has_digest.png)
 
 生成完毕后，你可以在 `Daily Read` 中看到简报。点击 Enter 键，可以查看简报的详情:
-
-![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/todays_digest.png)
+![todays_digest](https://tidyread.s3.us-west-2.amazonaws.com/todays_digest.png)
 
 由于目前没有设置 AI 相关的配置，所以简报中的 所有内容都是原始内容，并没有经过 AI 摘要。
 

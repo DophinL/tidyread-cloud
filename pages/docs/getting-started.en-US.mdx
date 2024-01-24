@@ -1,42 +1,56 @@
 import { Callout } from "nextra/components";
 
-## Prerequisite
+## Prerequisites
 
-Tidyread currently only offers a Raycast Extension. If you haven't installed Raycast yet, I strongly recommend you try it. You can download it from [here](https://raycast.com/).
+Tidyread currently only offers a Raycast extension. If you haven't installed Raycast yet, it's highly recommended to give it a try. You can download it [here](https://raycast.com/).
 
 ## Installation
 
 Install the [Tidyread Raycast Extension](https://www.raycast.com/jaredliu233/tidyread---streamline-your-daily-reading)
 
+## Launch
+
+Enter the `Manage Source List` command. To help users get started quickly, you will see an onboarding guide:
+![onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/onboard_guide.png)
+
+After selecting your areas of interest and submitting, Tidyread will automatically add some reading sources for you and navigate to the `Daily Read` command (your most commonly used command) to automatically generate a digest:
+![digest_generating](https://tidyread.s3.us-west-2.amazonaws.com/digest_generating.png)
+
+If you don't like the recommended reading sources, you can skip this step:
+![skip_onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/skip_onboard_guide.png)
+
 ## Adding Your First Reading Source
+
+If you skip the guide, you'll need to manually add a reading source, and you'll see an empty list:
 
 ![empty_list](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_empty_list.png)
 
-Enter the `Manage Source List` command, and you'll see an empty list. Pressing Enter will trigger the creation of a reading source.
+Pressing Enter will trigger the creation of a reading source:
 
 ![add_source](https://tidyread.s3.us-west-2.amazonaws.com/tidyread_add_source.png)
 
-Only URL and Title are required fields, others are optional.
-With the Schedule field, you can plan the reading time for this source, and it will appear in that day's `Daily Read`.
+If you went through the guide, some reading sources will be automatically created for you. In `Manage Source List`, you can still manually create subscriptions using `cmd + N`, taking you to the interface shown above.
+
+Only the URL and Title are required fields; the rest are optional.
+Through the Schedule field, you can plan the reading time for that source, and it will appear in that day's `Daily Read`.
 
 <Callout type="info">
-    Only when the RSS Link is provided, can the reading source be used to
-    generate digests. If you want to learn how to find a website's RSS, you can
-    refer to the [documentation](/zh-CN/docs/where-to-find-rss).
+    Only when the RSS
+    Link is provided, can the reading source be used to generate digests. If you want to learn how to find a website's RSS, you can refer to the [documentation](/zh-CN/docs/where-to-find-rss).
 </Callout>
 
-## Trying to Generate a Digest
+## Try Generating a Digest
+
+Enter the `Daily Read` command. If you skipped the onboarding guide, you'll see that the digest has not yet been generated:
 
 ![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_empty_digest.png)
 
-Enter the `Daily Read` command, press Enter, and wait for the digest to generate.
+Press Enter and wait for the digest to be generated:
+![daily_read_has_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_has_digest.png)
 
-![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/daily_read_has_digest.png)
+Once generated, you can see the digest in `Daily Read`. Clicking Enter allows you to view the details of the digest:
+![todays_digest](https://tidyread.s3.us-west-2.amazonaws.com/todays_digest.png)
 
-Once it's generated, you can view the digest in `Daily Read`. Click Enter to view the details of the digest:
+Since no AI-related configurations have been set up yet, all content in the digest is original and has not been summarized by AI.
 
-![daily_read_empty_digest](https://tidyread.s3.us-west-2.amazonaws.com/todays_digest.png)
-
-Since there are currently no AI-related settings configured, all content in the digest is original and has not been summarized by AI.
-
-By now, you have used the basic functions of Tidyread. If you wish to further enhance your reading experience, please continue reading.
+At this point, you have used the basic functions of Tidyread. If you wish to further enhance your reading experience, please continue reading.
