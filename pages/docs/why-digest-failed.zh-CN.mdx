@@ -7,7 +7,17 @@
 
 ## 执行时间过长
 
-请参考[这篇文档](/zh-CN/docs/use-like-a-pro#如何让简报更快地生成)。
+可以调整以下参数：
+![improve_digest_speed](https://tidyread.s3.us-west-2.amazonaws.com/improve_digest_speed.png)
+
+`Max Items Per RSS Feed` 代表每个阅读源每次抓取多少篇文章，这个值越大，要摘要的文章越多，速度越慢。所以可以尝试**调小这个值**。
+
+`Max Summarize API Concurrency` 代表同时调用多少个摘要 API，这个值越小，速度越慢。所以可以尝试**调大这个值**。但是上限取决于 AI Provider 的限制，比如 `Moonshot AI` 目前只允许并发为 3。
+
+此外，AI Provider 一般还会限制 一分钟内的最大调用次数，所以你可能还需要调整 `API Retry` 相关的参数，避免最终文章摘要失败：
+![api_retry_setting](https://tidyread.s3.us-west-2.amazonaws.com/api_retry_setting.png)
+
+如果你觉得默认值太大导致重试时长过长，可以尝试调小这两个值。
 
 ## 未知的 Raycast 错误
 

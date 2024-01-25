@@ -52,7 +52,8 @@ Summarize the content within 50 to 200 characters, excluding any references to a
 配置完毕后，尝试再生成一次简报，就可以看到 AI 摘要的效果了：
 ![ai_summarized](https://tidyread.s3.us-west-2.amazonaws.com/digest_with_ai.png)
 
-如果发现有些文章摘要失败了，一般是因为超出了频率限制。可以尝试调整 API Concurrency 为 `1`：
-![api_concur](https://tidyread.s3.us-west-2.amazonaws.com/api_concur.png)
+如果简报生成时间过长或者生成失败，可以参考 [文档](/zh-CN/docs/why-digest-failed) 进行排查。
+
+如果发现有些文章摘要失败了，可以参考 [文档](/zh-CN/docs/why-some-articles-fail-to-be-summarized) 进行排查。
 
 从刚才的效果我们可以看出来，简报中文章的标题和内容采用的是原文的语言，有没有可能翻译成我们更熟悉的语言呢？请看下一章节。
