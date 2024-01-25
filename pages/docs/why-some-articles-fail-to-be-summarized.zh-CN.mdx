@@ -1,1 +1,15 @@
-... TODO
+## API 限频
+
+可能是因为达到了 `Rate Limit`：
+![summarize_fail](https://tidyread.s3.us-west-2.amazonaws.com/summarize_fail.png)
+
+AI Provider 通常会限制 一分钟内的最大调用次数。你可以调整 `API Retry` 相关的参数，避免文章摘要失败：
+![api_retry_setting](https://tidyread.s3.us-west-2.amazonaws.com/api_retry_setting.png)
+
+## 内容审核不通过
+
+AI 接口一般会接内容审核，如果内容不符合要求，也可能导致失败。
+
+## 其它
+
+如果还有其它情况，请在任意命令唤起 Actions，点击 `Bug Report` 进行反馈，或者直接在 [X(Twitter) 上 DM 我](https://x.com/jaredliu_bravo)。

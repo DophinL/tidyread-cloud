@@ -1,1 +1,15 @@
-... TODO
+## API Rate Limiting
+
+The issue might be due to reaching the `Rate Limit`:
+![summarize_fail](https://tidyread.s3.us-west-2.amazonaws.com/summarize_fail.png)
+
+AI Providers typically limit the maximum number of calls within a minute. You can adjust the `API Retry` related settings to avoid article summary failures:
+![api_retry_setting](https://tidyread.s3.us-west-2.amazonaws.com/api_retry_setting.png)
+
+## Content Moderation Failure
+
+AI interfaces generally include content moderation. If the content does not meet the requirements, it may also lead to failure.
+
+## Other Issues
+
+If there are other issues, invoke Actions in any command and click `Bug Report` to provide feedback, or directly DM me on [X(Twitter)](https://x.com/jaredliu_bravo).
