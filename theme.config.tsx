@@ -1,6 +1,28 @@
 import React from "react";
 import { DocsThemeConfig, LocaleSwitch } from "nextra-theme-docs";
 import Image from "next/image";
+import Link from "next/link";
+import useLocale from "./lib/useLocale";
+import { genUseTranslation } from "./lib/translation";
+
+const useTranslation = genUseTranslation({
+    "en-US": {
+        text: "If you encounter slow Digest generation, please click here for a temporary solution →",
+    },
+    "zh-CN": {
+        text: "若遇到Digest生成过慢，请点击此处临时解决 →",
+    },
+});
+function BannerText() {
+    const locale = useLocale();
+    const { t } = useTranslation();
+    return (
+        <Link href={`/${locale}/docs/ai-default-config`}>
+            <span className="sm:hidden">{t("text")}</span>
+            <span className="hidden sm:inline">{t("text")}</span>
+        </Link>
+    );
+}
 
 const config: DocsThemeConfig = {
     darkMode: false,
@@ -23,7 +45,7 @@ const config: DocsThemeConfig = {
         </>
     ),
     sidebar: {
-      toggleButton: true
+        toggleButton: true,
     },
     // chat: {
     //     link: "https://discord.com",
@@ -55,6 +77,11 @@ const config: DocsThemeConfig = {
             titleTemplate: "%s | Tidyread",
         };
         // }
+    },
+    banner: {
+        key: "founding-eng-banner",
+        dismissible: false,
+        text: <BannerText />,
     },
 };
 

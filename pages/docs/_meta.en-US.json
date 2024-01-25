@@ -16,6 +16,7 @@
         "type": "separator",
         "title": "Reference"
     },
+    "ai-default-config": "AI Provider Default Config",
     "rss-pull": "RSS Pull",
     "recommended-sources": "Builtin Recommended Sources",
     "data-security": "Data Security",

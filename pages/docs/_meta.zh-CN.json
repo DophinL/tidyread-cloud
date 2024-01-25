@@ -16,6 +16,7 @@
         "type": "separator",
         "title": "参考"
     },
+    "ai-default-config": "AI Provider 默认配置",
     "rss-pull": "RSS 拉取",
     "recommended-sources": "内置的推荐阅读源",
     "data-security": "数据安全",
