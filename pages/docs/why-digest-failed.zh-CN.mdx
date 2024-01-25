@@ -7,11 +7,12 @@
 
 ## 执行时间过长
 
-如果执行时间过长，可能是因为 RSS 拉取的文章数量太多，每一篇文章都需要经过 AI 摘要。可以尝试减少 RSS 源的数量，或者减少每个 RSS 源拉取的文章上限：
-![max_items_per_feed](https://tidyread.s3.us-west-2.amazonaws.com/max_items_per_feed.png)
+请参考[这篇文档](/zh-CN/docs/use-like-a-pro#如何让简报更快地生成)。
 
-也可以尝试提升 API 的并发数量：
-![api_concur_up](https://tidyread.s3.us-west-2.amazonaws.com/api_concur_up.png)
+## 未知的 Raycast 错误
+
+如果你手动生成简报，当临时关闭 Raycast 窗口时，可能会偶发中断，但不会抛出任何错误。此问题需要 Raycast 官方修复。遇到这种情况，一种解决办法是让 Raycast 窗口保持打开直到生成完毕。
+最好的解决办法是使用自动生成功能，请参考[文档](/zh-CN/docs/automate-daily-digest)。
 
 ## 其它
 

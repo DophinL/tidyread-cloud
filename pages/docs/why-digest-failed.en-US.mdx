@@ -1,18 +1,19 @@
-Currently, there are several possibilities:
+There are several possibilities for issues encountered:
 
 ## Network Blocking
 
-Fetching RSS data and calling AI interfaces require network access. If the network is blocked, you can try using a proxy:
+Fetching RSS data and calling AI interfaces both require a network connection. If the network is blocked, you can try using a proxy:
 ![http_proxy](https://tidyread.s3.us-west-2.amazonaws.com/http_proxy.png)
 
 ## Excessive Execution Time
 
-If the execution time is too long, it may be because there are too many articles fetched from RSS feeds, and each article requires an AI summary. Try reducing the number of RSS feeds, or decrease the maximum number of articles fetched per feed:
-![max_items_per_feed](https://tidyread.s3.us-west-2.amazonaws.com/max_items_per_feed.png)
+Please refer to [this document](/docs/use-like-a-pro#如何让简报更快地生成).
 
-You could also try increasing the concurrency of the API calls:
-![api_concur_up](https://tidyread.s3.us-west-2.amazonaws.com/api_concur_up.png)
+## Unknown Raycast Error
 
-## Others
+If you are manually generating a digest and temporarily close the Raycast window, it may occasionally interrupt without throwing any errors. This issue needs to be fixed by Raycast officially. If you encounter this, one solution is to keep the Raycast window open until the generation is complete.
+The best solution is to use the auto-generation feature, as detailed in [this document](/docs/automate-daily-digest).
 
-If there are other issues, please invoke Actions with any command, click on `Bug Report` to provide feedback, or directly DM me on [X(Twitter)](https://x.com/jaredliu_bravo).
+## Other
+
+If there are other issues, invoke Actions in any command and click `Bug Report` to provide feedback, or directly DM me on [X(Twitter)](https://x.com/jaredliu_bravo).
