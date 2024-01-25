@@ -4,15 +4,15 @@ You actually don't need to manually generate digests. You can specify a time for
 
 ## How to Make Digest Generation Faster?
 
-If it's automatically generated, no optimization is needed. However, manual generation can test our patience if it takes too long, even though it is asynchronous and doesn't block us from doing other things.
+If the digest is being generated automatically, there's no need for optimization. However, if you're generating it manually, waiting too long can be frustrating, even though it's asynchronous and doesn't block other activities.
 
-If you are manually generating, you can adjust the following parameters:
+For manual generation, you can adjust the following parameters:
 ![improve_digest_speed](https://tidyread.s3.us-west-2.amazonaws.com/improve_digest_speed.png)
 
-`Max Items Per RSS Feed` represents how many articles are fetched from each reading source at a time. The larger this value, the more articles to summarize and the slower the speed.
+`Max Items Per RSS Feed` indicates how many articles are fetched from each reading source at a time. The smaller this value, the fewer articles to summarize, and the faster the speed.
 
-`Max Summarize API Concurrency` represents how many summary APIs are called simultaneously. The larger this value, the faster the speed, but it depends on the limitations of the AI Provider, like `Moonshot AI` currently only allows a concurrency of 3.
-Moreover, AI Providers generally also limit the maximum number of calls per minute, so you might need to adjust the `API Retry` related parameters to avoid summary failures in the end:
+`Max Summarize API Concurrency` represents how many summary APIs are called simultaneously. The larger this value, the faster the speed, but it is subject to the limitations of the AI Provider, like `Moonshot AI` currently only allows a concurrency of 3.
+Moreover, AI Providers generally limit the maximum number of calls within a minute, so you might also need to adjust the `API Retry` related settings to avoid final article summary failures:
 ![api_retry_setting](https://tidyread.s3.us-west-2.amazonaws.com/api_retry_setting.png)
 
 ## Shortcuts
