@@ -1,1 +1,5 @@
-... TODO
+Articles in the RSS feed are fetched during the generation of the digest.
+
+The number of articles fetched depends on the value of `Max Items Per RSS Feed` in the plugin settings page. The time range of the fetch depends on the `Time Span` value in the reading source editing page.
+
+For example, if the `Max Items Per RSS Feed` value is 10, and a particular reading source's `Time Span` value is set to 1 day, then this reading source will retain a maximum of 10 articles (which could be fewer than 10, as there might not have been 10 articles published in the past day).
