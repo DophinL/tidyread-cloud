@@ -7,14 +7,14 @@ const locales = {
         follow: "Follow along on X(Twitter)",
         header: "AI-Powered Reading Extension\nInstant Access At Your Fingertips",
         description:
-            "A free and open source Raycast Extension for information reading.\nOffering a more organized, efficient, and stress-free experience.",
+            "A free and open source Raycast Extension for information reading.\nOffering a more controllable, efficient, and organized experience.",
         "get-started": "Get Started",
     },
     "zh-CN": {
         follow: "在 X(Twitter) 上关注进展",
         header: "AI驱动的轻量阅读插件\n触指间即可唤起",
         description:
-            "一款免费且开源的 Raycast 插件\n让资讯阅读更加 有序、高效、无压",
+            "一款免费且开源的 Raycast 插件\n让资讯阅读更加 可控、高效、有序",
         "get-started": "开始使用",
     },
 };
