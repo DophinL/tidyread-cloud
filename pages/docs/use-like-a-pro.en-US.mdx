@@ -1,0 +1,23 @@
+... TODOimport { Callout } from "nextra/components";
+
+## Automating Digest Generation
+
+You actually don't need to manually generate digests. You can specify a time for the digest to be automatically generated based on the day's reading sources and push notifications to you. For more information, refer to [this document](https://tidyread.info/zh-CN/docs/automate-daily-digest).
+
+## How to Make Digest Generation Faster?
+
+If it's automatically generated, no optimization is needed. However, manual generation can test our patience if it takes too long, even though it is asynchronous and doesn't block us from doing other things.
+
+If you are manually generating, you can adjust the following parameters:
+![improve_digest_speed](https://tidyread.s3.us-west-2.amazonaws.com/improve_digest_speed.png)
+
+`Max Items Per RSS Feed` represents how many articles are fetched from each reading source at a time. The larger this value, the more articles to summarize and the slower the speed.
+
+`Max Summarize API Concurrency` represents how many summary APIs are called simultaneously. The larger this value, the faster the speed, but it depends on the limitations of the AI Provider, like `Moonshot AI` currently only allows a concurrency of 3.
+Moreover, AI Providers generally also limit the maximum number of calls per minute, so you might need to adjust the `API Retry` related parameters to avoid summary failures in the end:
+![api_retry_setting](https://tidyread.s3.us-west-2.amazonaws.com/api_retry_setting.png)
+
+## Shortcuts
+
+The command we use most daily is `Daily Read`. You can set a global shortcut for it to enhance your efficiency:
+![shortcut](https://tidyread.s3.us-west-2.amazonaws.com/shortcut.png)

@@ -1,0 +1,23 @@
+import { Callout } from "nextra/components";
+
+## 自动化生成简报
+
+其实你并不需要手动生成简报，你可以指定一个时间，每日到了时间自动根据当天的阅读源生成简报，并且给你推送通知。可以参考[这篇文档](https://tidyread.info/zh-CN/docs/automate-daily-digest)。
+
+## 如何让简报更快地生成？
+
+如果是自动生成，无需做任何优化。不过手动生成等太久的话会消耗我们的耐心，即使它是异步的并不会阻塞我们做其他事情。
+
+若是手动生成，你可以调整以下参数：
+![improve_digest_speed](https://tidyread.s3.us-west-2.amazonaws.com/improve_digest_speed.png)
+
+`Max Items Per RSS Feed` 代表每个阅读源每次抓取多少篇文章，这个值越大，要摘要的文章越多，速度越慢。
+
+`Max Summarize API Concurrency` 代表同时调用多少个摘要 API，这个值越大，速度越快，但是取决于 AI Provider 的限制，比如 `Moonshot AI` 目前只允许并发为 3。
+此外，AI Provider 一般还会限制 一分钟内的最大调用次数，所以你可能还需要调整 `API Retry` 相关的参数，避免最终文章摘要失败：
+![api_retry_setting](https://tidyread.s3.us-west-2.amazonaws.com/api_retry_setting.png)
+
+## 快捷键
+
+日常我们使用最多的就是 `Daily Read` 命令，你可以给它设定一个全局快捷键，来提升你的效率：
+![shortcut](https://tidyread.s3.us-west-2.amazonaws.com/shortcut.png)
