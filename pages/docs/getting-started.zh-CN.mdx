@@ -16,6 +16,11 @@ Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast �
 选择你感兴趣领域提交后，Tidyread 会自动为你添加一些阅读源，并且跳转到 `Daily Read` 命令（你最常用的命令）自动生成一份简报：
 ![digest_generating](https://tidyread.s3.us-west-2.amazonaws.com/digest_generating.png)
 
+<Callout type="warning">
+    中国用户到这一步可能会生成失败，因为简报生成会经过 RSS 拉取和 AI API
+    调用，需要科学上网才能成功。
+</Callout>
+
 如果你不喜欢推荐的阅读源，可以跳过这个步骤：
 ![skip_onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/skip_onboard_guide.png)
 
@@ -37,6 +42,9 @@ Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast �
 <Callout type="info">
     只有填写了 RSS
     Link，阅读源才能用于生成简报。如果你想了解如何找到网站的RSS，可参考[文档](/zh-CN/docs/where-to-find-rss)。
+</Callout>
+<Callout type="warning">
+    如果 `RSS Link` 一直校验超时导致无法保存，可能是因为没有科学上网。
 </Callout>
 
 ## 尝试生成简报
