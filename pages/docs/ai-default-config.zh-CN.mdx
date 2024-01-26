@@ -6,16 +6,30 @@ import { Callout } from "nextra/components";
 
 ## OpenAI Provider
 
-![openai_config](https://tidyread.s3.us-west-2.amazonaws.com/openai_config.png)
-
-<Callout type="info">
-    中国用户若使用自己的OpenAI API HOST，可能比本地代理有更好的效果
-</Callout>
+```
+{
+  maxApiConcurrency: 10,
+  retryCount: 3,
+  retryDelay: 5,
+}
+```
 
 ## Raycast AI Provider
 
-![raycast_ai_config](https://tidyread.s3.us-west-2.amazonaws.com/raycast_ai_config.png)
+```json
+{
+    "maxApiConcurrency": 5,
+    "retryCount": 4,
+    "retryDelay": 20
+}
+```
 
 ## Moonshot AI Provider
 
-![moonshot_ai_config](https://tidyread.s3.us-west-2.amazonaws.com/moonshot_ai_config.png)
+```json
+{
+    "maxApiConcurrency": 3,
+    "retryCount": 3,
+    "retryDelay": 5
+}
+```

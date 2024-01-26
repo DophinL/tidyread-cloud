@@ -6,18 +6,35 @@ import { Callout } from "nextra/components";
     temporary solution, and wait for the Bugfix to be reviewed and released for
     a final resolution. However, if the number of articles is too large, it may
     still take a few minutes. It is recommended that you enable the [automatic
-    generation of Digest](/docs/automate-daily-digest) feature to avoid
-    waiting.
+    generation of Digest](/docs/automate-daily-digest) feature to avoid waiting.
 </Callout>
 
 ## OpenAI Provider
 
-![openai_config](https://tidyread.s3.us-west-2.amazonaws.com/openai_config.png)
+```
+{
+  maxApiConcurrency: 10,
+  retryCount: 3,
+  retryDelay: 5,
+}
+```
 
 ## Raycast AI Provider
 
-![raycast_ai_config](https://tidyread.s3.us-west-2.amazonaws.com/raycast_ai_config.png)
+```json
+{
+    "maxApiConcurrency": 5,
+    "retryCount": 4,
+    "retryDelay": 20
+}
+```
 
 ## Moonshot AI Provider
 
-![moonshot_ai_config](https://tidyread.s3.us-west-2.amazonaws.com/moonshot_ai_config.png)
+```json
+{
+    "maxApiConcurrency": 3,
+    "retryCount": 3,
+    "retryDelay": 5
+}
+```
