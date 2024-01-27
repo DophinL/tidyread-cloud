@@ -1,18 +1,3 @@
-import { Callout } from "nextra/components";
-
-<Callout type="warning">
-    Currently, due to default configurations, there's an issue with the Digest
-    generation being too slow. Please refer to the following temporary settings,
-    and wait for the [Bugfix](https://github.com/raycast/extensions/pull/10357)
-    to be reviewed and released for a final resolution. However, if the number
-    of articles is too large (e.g., over 40), it might still take a few minutes.
-    It's recommended to enable the [automatic generation of
-    Digest](/docs/automate-daily-digest) feature to avoid waiting.
-</Callout>
-
-The new [PR](https://github.com/raycast/extensions/pull/10357) not only optimizes configurations and generation performance but also adds a progress page to give you a clear view of the current generation progress. Stay tuned:
-![progress_panel](https://tidyread.s3.us-west-2.amazonaws.com/progress_panel.png)
-
 ## Configuration Method
 
 ![ai_setting](https://tidyread.s3.us-west-2.amazonaws.com/ai_setting.png)
@@ -22,7 +7,7 @@ The new [PR](https://github.com/raycast/extensions/pull/10357) not only optimize
 ```json
 {
     "maxApiConcurrency": 10,
-    "retryCount": 3,
+    "retryCount": 2,
     "retryDelay": 5
 }
 ```
@@ -32,7 +17,7 @@ The new [PR](https://github.com/raycast/extensions/pull/10357) not only optimize
 ```json
 {
     "maxApiConcurrency": 5,
-    "retryCount": 4,
+    "retryCount": 3,
     "retryDelay": 20
 }
 ```
@@ -42,7 +27,7 @@ The new [PR](https://github.com/raycast/extensions/pull/10357) not only optimize
 ```json
 {
     "maxApiConcurrency": 3,
-    "retryCount": 3,
+    "retryCount": 2,
     "retryDelay": 5
 }
 ```

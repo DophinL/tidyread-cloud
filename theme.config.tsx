@@ -78,11 +78,11 @@ const config: DocsThemeConfig = {
         };
         // }
     },
-    banner: {
-        key: "founding-eng-banner",
-        dismissible: false,
-        text: <BannerText />,
-    },
+    // banner: {
+    //     key: "founding-eng-banner",
+    //     dismissible: false,
+    //     text: <BannerText />,
+    // },
 };
 
 export default config;
