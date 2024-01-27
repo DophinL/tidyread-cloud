@@ -1,20 +1,29 @@
 import { Callout } from "nextra/components";
 
 <Callout type="warning">
-    目前由于默认配置，引发Digest生成过慢的线上问题。请先参考以下配置临时解决，等待Bugfix审核发布后会得到最终的解决。不过如果文章数量过多，仍然可能需要几分钟，建议你开启[自动生成Digest](/zh-CN/docs/automate-daily-digest)的功能，避免等待。
+    目前由于默认配置，引发Digest生成过慢的线上问题。请先参考以下配置临时解决，等待
+    [Bugfix](https://github.com/raycast/extensions/pull/10357)
+    审核并发布后，会得到最终的解决。不过如果文章数量过多（比如超过40篇），仍然可能需要几分钟，建议你开启[自动生成Digest](/zh-CN/docs/automate-daily-digest)的功能，避免等待。
 </Callout>
 
-## OpenAI Provider
+新的 [PR](https://github.com/raycast/extensions/pull/10357) 里除了优化配置、优化生成性能外，还增加了一个进度页面，让你对目前的生成进度一目了然，敬请期待：
+![progress_panel](https://tidyread.s3.us-west-2.amazonaws.com/progress_panel.png)
+
+## 配置方式
+
+![ai_setting](https://tidyread.s3.us-west-2.amazonaws.com/ai_setting.png)
+
+### OpenAI Provider
 
 ```json
 {
-  maxApiConcurrency: 10,
-  retryCount: 3,
-  retryDelay: 5,
+    "maxApiConcurrency": 10,
+    "retryCount": 3,
+    "retryDelay": 5
 }
 ```
 
-## Raycast AI Provider
+### Raycast AI Provider
 
 ```json
 {
@@ -24,7 +33,7 @@ import { Callout } from "nextra/components";
 }
 ```
 
-## Moonshot AI Provider
+### Moonshot AI Provider
 
 ```json
 {

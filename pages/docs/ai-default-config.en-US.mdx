@@ -1,15 +1,23 @@
 import { Callout } from "nextra/components";
 
 <Callout type="warning">
-    Due to the default configuration, there is currently an issue with the
-    Digest generation being slow. Please refer to the following settings for a
-    temporary solution, and wait for the Bugfix to be reviewed and released for
-    a final resolution. However, if the number of articles is too large, it may
-    still take a few minutes. It is recommended that you enable the [automatic
-    generation of Digest](/docs/automate-daily-digest) feature to avoid waiting.
+    Currently, due to default configurations, there's an issue with the Digest
+    generation being too slow. Please refer to the following temporary settings,
+    and wait for the [Bugfix](https://github.com/raycast/extensions/pull/10357)
+    to be reviewed and released for a final resolution. However, if the number
+    of articles is too large (e.g., over 40), it might still take a few minutes.
+    It's recommended to enable the [automatic generation of
+    Digest](/docs/automate-daily-digest) feature to avoid waiting.
 </Callout>
 
-## OpenAI Provider
+The new [PR](https://github.com/raycast/extensions/pull/10357) not only optimizes configurations and generation performance but also adds a progress page to give you a clear view of the current generation progress. Stay tuned:
+![progress_panel](https://tidyread.s3.us-west-2.amazonaws.com/progress_panel.png)
+
+## Configuration Method
+
+![ai_setting](https://tidyread.s3.us-west-2.amazonaws.com/ai_setting.png)
+
+### OpenAI Provider
 
 ```json
 {
@@ -19,7 +27,7 @@ import { Callout } from "nextra/components";
 }
 ```
 
-## Raycast AI Provider
+### Raycast AI Provider
 
 ```json
 {
@@ -29,7 +37,7 @@ import { Callout } from "nextra/components";
 }
 ```
 
-## Moonshot AI Provider
+### Moonshot AI Provider
 
 ```json
 {
