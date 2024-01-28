@@ -10,16 +10,22 @@ Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast �
 
 ## 启动
 
-进入到 `Manage Source List` 命令，为了帮助用户更快上手，你会看到一个启动引导：
+<Callout type="warning">
+    中国用户建议先配置 Http
+    Proxy（需科学上网），否则后续拉取RSS（用于生成简报）的过程可能会由于哔哔原因而失败。
+</Callout>
+
+打开 Raycast 设置页面找到`Http Proxy` 配置项，填入科学上网工具的 http proxy：
+![http_proxy](https://tidyread.s3.us-west-2.amazonaws.com/http_proxy.png)
+
+注意以上端口号部分，每个科学上网工具是不同的，需要自行查看。比如我的就是从下图位置导出的：
+![tz_http_proxy](https://tidyread.s3.us-west-2.amazonaws.com/tz_http_proxy.png)
+
+接下来从 Raycast 进入到 `Manage Source List` 命令，为了帮助用户更快上手，你会看到一个启动引导：
 ![onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/onboard_guide.png)
 
 选择你感兴趣领域提交后，Tidyread 会自动为你添加一些阅读源，并且跳转到 `Daily Read` 命令（你最常用的命令）自动生成一份简报：
 ![digest_generating](https://tidyread.s3.us-west-2.amazonaws.com/digest_generating.png)
-
-<Callout type="warning">
-    中国用户到这一步可能会生成失败，因为简报生成会经过 RSS 拉取和 AI API
-    调用，需要科学上网才能成功。
-</Callout>
 
 如果你不喜欢推荐的阅读源，可以跳过这个步骤：
 ![skip_onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/skip_onboard_guide.png)
@@ -44,7 +50,8 @@ Tidyread 目前只提供了 Raycast 插件，如果你还没有安装 Raycast �
     Link，阅读源才能用于生成简报。如果你想了解如何找到网站的RSS，可参考[文档](/zh-CN/docs/where-to-find-rss)。
 </Callout>
 <Callout type="warning">
-    如果 `RSS Link` 一直校验超时导致无法保存，可能是因为没有科学上网。
+    如果 `RSS Link` 一直校验超时导致无法保存，可能是因为没有配置 Http
+    Proxy（需科学上网），参考[启动](#启动)。
 </Callout>
 
 ## 尝试生成简报
