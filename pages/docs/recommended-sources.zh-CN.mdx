@@ -1,13 +1,13 @@
 import { Pre, Code } from "nextra/components";
 import recommendedSources from "../../public/recommended_data.json";
 
-首次进入 Tidyread 的 `Manage Source List` 命令，会进入到 `Onboarding` 页面:
+首次进入 Tidyread 的 `Manage Sources` 命令，会进入到 `Onboarding` 页面:
 
 ![onboard_guide](https://tidyread.s3.us-west-2.amazonaws.com/onboard_guide.png)
 
 Tidyread 会根据你填的信息，自动生成推荐的阅读源。
 
-以下为当前的推荐源，如果需要，你可以拷贝其中任意一个版块的 `sources` 数组，在`Manage Source List`命令中进行导入：
+以下为当前的推荐源，如果需要，你可以拷贝其中任意一个版块的 `sources` 数组，在`Manage Sources`命令中进行导入：
 
 <Pre lang="json" hasCopyCode>
     <Code lang="json">{JSON.stringify(recommendedSources, null, 2)}</Code>
