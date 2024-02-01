@@ -30,12 +30,15 @@ const provider = new MoonshotProvider({
 
 async function genTags(source: ExternalSource): Promise<string[]> {
   const prompt = `
-  Please select the most matching tag based on the title and description from an RSS feed and output it directly, without elaboration:
+  Given an RSS feed with the title ${source.title}${source.description ? ` and the description ${source.description}` : ""}, please select the most matching tag from the following content and output it directly, without elaboration:
 
   ${PLAIN_CATEGORIES.join("\n")}
   `;
 
-  const tag = await provider.ask(prompt, `title: ${source.title} description: ${source.description}`);
+  let tag = await provider.ask(prompt);
+  tag = tag.trim();
+
+  logger.info(`${source.title}: generate tag \`${tag}\``);
 
   if (!PLAIN_CATEGORIES.includes(tag)) {
     throw new Error(`${source.title}: generate tag \`${tag}\` is not valid`);
@@ -52,13 +55,29 @@ async function main() {
 
   // 重复生成tags，因为有可能出错，失败则忽略
   const promises = sourcesWithoutTags.map(async (source) => {
-    const tags = await limit(() => retry(() => genTags(source as ExternalSource), 3, 5000));
+    const tags = await limit(() =>
+      retry(
+        () =>
+          genTags(source as ExternalSource).catch((err) => {
+            logger.error(`${source.title}: ${err.message}`);
+            throw err;
+          }),
+        3,
+        5000,
+      ),
+    );
     source.tags = tags;
     successCount += 1;
     return source;
   });
 
-  await Promise.allSettled(promises);
+  await Promise.allSettled(promises).then((results) => {
+    results.forEach((result, index) => {
+      if (result.status === "rejected") {
+        logger.error(`${sourcesWithoutTags[index].title}: ${result.reason}`);
+      }
+    });
+  });
 
   // 保存更改回data/rss.json
   await writeJsonFile(rssJsonPath, sources);

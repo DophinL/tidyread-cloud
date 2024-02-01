@@ -1,127 +1,127 @@
 [
-    {
-        "url": "https://news.ycombinator.com/",
-        "rssLink": "https://news.ycombinator.com/rss",
-        "title": "Hacker News",
-        "tags": ["Technology"],
-        "favicon": "https://news.ycombinator.com/y18.svg"
-    },
-    {
-        "url": "https://www.phdeck.com/",
-        "title": "PH Deck",
-        "rssLink": "https://www.producthunt.com/feed",
-        "tags": ["Product"],
-        "favicon": "https://www.phdeck.com/favicon.ico",
-        "description": "A more efficient way to browse Product Hunt",
-        "weight": 99
-    },
-    {
-        "rssLink": "https://rsshub.app/ainvest/article",
-        "tags": ["AI"],
-        "url": "https://www.ainvest.com/",
-        "title": "AInvest",
-        "favicon": "https://www.ainvest.com/wencai-ssr/_nuxt/icons/icon_64x64.d7847c.png"
-    },
-    {
-        "rssLink": "https://www.technologyreview.com/feed/",
-        "tags": ["Technology"],
-        "url": "https://www.technologyreview.com/",
-        "title": "MIT Technology Review",
-        "favicon": "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93ddf5feb5405dd4cc.ico"
-    },
-    {
-        "url": "https://www.investopedia.com",
-        "title": "Investopedia",
-        "rssLink": "https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_articles",
-        "tags": ["Finance"],
-        "favicon": "https://www.investopedia.com/favicon.ico"
-    },
-    {
-        "rssLink": "https://feeds.businessinsider.com/custom/all",
-        "tags": ["Finance"],
-        "url": "https://www.businessinsider.com/",
-        "title": "Business Insider",
-        "favicon": "https://www.businessinsider.com/public/assets/BI/US/favicons/apple-touch-icon-192x192.png?v=2023-11"
-    },
-    {
-        "tags": ["Finance"],
-        "url": "https://www.economist.com/",
-        "rssLink": "https://rsshub.app/economist/latest",
-        "title": "The Economist",
-        "favicon": "https://www.economist.com/favicon.ico"
-    },
-    {
-        "url": "https://www.buzzfeednews.com",
-        "rssLink": "https://www.buzzfeednews.com/news.xml",
-        "title": "BuzzFeed News",
-        "tags": ["General"],
-        "favicon": "https://www.buzzfeednews.com/static-assets/img/favicon.40f4055ea10bb11593f4c85d55164232.ico"
-    },
-    {
-        "title": "HuffPost",
-        "url": "https://www.huffpost.com/",
-        "tags": ["General"],
-        "rssLink": "https://chaski.huffpost.com/us/auto/vertical/world-news",
-        "favicon": "https://www.huffpost.com/favicon.ico"
-    },
-    {
-        "available": true,
-        "url": "https://www.scotthyoung.com/blog/",
-        "rssLink": "https://www.scotthyoung.com/blog/feed/",
-        "title": "Scott H Young",
-        "favicon": "https://www.scotthyoung.com/blog/wp-content/uploads/2019/05/favicon.png",
-        "weight": 14.44,
-        "activeStatus": "active",
-        "activeScore": 14.44,
-        "description": "Learn faster, achieve more",
-        "tags": []
-    },
-    {
-        "available": true,
-        "url": "https://github.com/SwiftOldDriver/iOS-Weekly/releases",
-        "rssLink": "https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom",
-        "title": "Release notes from iOS-Weekly",
-        "favicon": "https://github.githubassets.com/favicons/favicon.svg",
-        "weight": 9.44,
-        "activeStatus": "active",
-        "activeScore": 9.44,
-        "description": "",
-        "tags": []
-    },
-    {
-        "available": true,
-        "url": "https://www.kymjs.com/",
-        "rssLink": "https://www.kymjs.com/feed.xml",
-        "title": "开源实验室",
-        "favicon": "",
-        "weight": 0,
-        "activeStatus": "inactive",
-        "activeScore": 0,
-        "description": "张涛的开源实验室",
-        "tags": []
-    },
-    {
-        "available": true,
-        "url": "https://ncase.me/",
-        "rssLink": "https://ncase.me/feed.xml",
-        "title": "Nicky's New Shtuff",
-        "favicon": "https://ncase.me/favicon.png",
-        "weight": 0,
-        "activeStatus": "inactive",
-        "activeScore": 0,
-        "description": "New Shtuff from Nicky Case",
-        "tags": []
-    },
-    {
-        "available": true,
-        "url": "https://diygod.cc",
-        "rssLink": "https://diygod.cc/feed",
-        "title": "Hi, DIYgod",
-        "favicon": "https://ipfs.crossbell.io/ipfs/bafybeibefx2tyow77m2wcnsh5anaaxfy7ypxbcuapb52c4h255onqp72ye",
-        "weight": 6.67,
-        "activeStatus": "active",
-        "activeScore": 6.67,
-        "description": "写代码是热爱，写到世界充满爱！",
-        "tags": []
-    }
+  {
+    "url": "https://news.ycombinator.com/",
+    "rssLink": "https://news.ycombinator.com/rss",
+    "title": "Hacker News",
+    "tags": ["Technology"],
+    "favicon": "https://news.ycombinator.com/y18.svg"
+  },
+  {
+    "url": "https://www.phdeck.com/",
+    "title": "PH Deck",
+    "rssLink": "https://www.producthunt.com/feed",
+    "tags": ["Product"],
+    "favicon": "https://www.phdeck.com/favicon.ico",
+    "description": "A more efficient way to browse Product Hunt",
+    "weight": 99
+  },
+  {
+    "rssLink": "https://rsshub.app/ainvest/article",
+    "tags": ["AI"],
+    "url": "https://www.ainvest.com/",
+    "title": "AInvest",
+    "favicon": "https://www.ainvest.com/wencai-ssr/_nuxt/icons/icon_64x64.d7847c.png"
+  },
+  {
+    "rssLink": "https://www.technologyreview.com/feed/",
+    "tags": ["Technology"],
+    "url": "https://www.technologyreview.com/",
+    "title": "MIT Technology Review",
+    "favicon": "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93ddf5feb5405dd4cc.ico"
+  },
+  {
+    "url": "https://www.investopedia.com",
+    "title": "Investopedia",
+    "rssLink": "https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_articles",
+    "tags": ["Finance"],
+    "favicon": "https://www.investopedia.com/favicon.ico"
+  },
+  {
+    "rssLink": "https://feeds.businessinsider.com/custom/all",
+    "tags": ["Finance"],
+    "url": "https://www.businessinsider.com/",
+    "title": "Business Insider",
+    "favicon": "https://www.businessinsider.com/public/assets/BI/US/favicons/apple-touch-icon-192x192.png?v=2023-11"
+  },
+  {
+    "tags": ["Finance"],
+    "url": "https://www.economist.com/",
+    "rssLink": "https://rsshub.app/economist/latest",
+    "title": "The Economist",
+    "favicon": "https://www.economist.com/favicon.ico"
+  },
+  {
+    "url": "https://www.buzzfeednews.com",
+    "rssLink": "https://www.buzzfeednews.com/news.xml",
+    "title": "BuzzFeed News",
+    "tags": ["General"],
+    "favicon": "https://www.buzzfeednews.com/static-assets/img/favicon.40f4055ea10bb11593f4c85d55164232.ico"
+  },
+  {
+    "title": "HuffPost",
+    "url": "https://www.huffpost.com/",
+    "tags": ["General"],
+    "rssLink": "https://chaski.huffpost.com/us/auto/vertical/world-news",
+    "favicon": "https://www.huffpost.com/favicon.ico"
+  },
+  {
+    "available": true,
+    "url": "https://www.scotthyoung.com/blog/",
+    "rssLink": "https://www.scotthyoung.com/blog/feed/",
+    "title": "Scott H Young",
+    "favicon": "https://www.scotthyoung.com/blog/wp-content/uploads/2019/05/favicon.png",
+    "weight": 14.44,
+    "activeStatus": "active",
+    "activeScore": 14.44,
+    "description": "Learn faster, achieve more",
+    "tags": ["Personal Development"]
+  },
+  {
+    "available": true,
+    "url": "https://github.com/SwiftOldDriver/iOS-Weekly/releases",
+    "rssLink": "https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom",
+    "title": "Release notes from iOS-Weekly",
+    "favicon": "https://github.githubassets.com/favicons/favicon.svg",
+    "weight": 9.44,
+    "activeStatus": "active",
+    "activeScore": 9.44,
+    "description": "",
+    "tags": ["Programming"]
+  },
+  {
+    "available": true,
+    "url": "https://www.kymjs.com/",
+    "rssLink": "https://www.kymjs.com/feed.xml",
+    "title": "开源实验室",
+    "favicon": "",
+    "weight": 0,
+    "activeStatus": "inactive",
+    "activeScore": 0,
+    "description": "张涛的开源实验室",
+    "tags": ["Programming"]
+  },
+  {
+    "available": true,
+    "url": "https://ncase.me/",
+    "rssLink": "https://ncase.me/feed.xml",
+    "title": "Nicky's New Shtuff",
+    "favicon": "https://ncase.me/favicon.png",
+    "weight": 0,
+    "activeStatus": "inactive",
+    "activeScore": 0,
+    "description": "New Shtuff from Nicky Case",
+    "tags": ["Blog"]
+  },
+  {
+    "available": true,
+    "url": "https://diygod.cc",
+    "rssLink": "https://diygod.cc/feed",
+    "title": "Hi, DIYgod",
+    "favicon": "https://ipfs.crossbell.io/ipfs/bafybeibefx2tyow77m2wcnsh5anaaxfy7ypxbcuapb52c4h255onqp72ye",
+    "weight": 6.67,
+    "activeStatus": "active",
+    "activeScore": 6.67,
+    "description": "写代码是热爱，写到世界充满爱！",
+    "tags": ["Blog"]
+  }
 ]

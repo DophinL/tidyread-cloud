@@ -20,16 +20,14 @@ class OpenaiProvider extends Provider {
     }
   }
 
-  async ask(prompt: string, content: string): Promise<string> {
+  async ask(content: string): Promise<string> {
     const { apiModel, maxTokens } = this.options;
-
-    if (!this.available) return content;
 
     try {
       const resp = await this.client!.chat.completions.create({
         model: apiModel ?? "gpt-3.5-turbo",
         messages: [
-          { role: "system", content: prompt },
+          // { role: "system", content: prompt },
           { role: "user", content: content },
         ],
         max_tokens: maxTokens,

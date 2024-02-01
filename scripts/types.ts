@@ -51,5 +51,5 @@ export abstract class Provider {
   }
 
   // 定义一个抽象方法
-  abstract ask(prompt: string, content: string): Promise<string>;
+  abstract ask(content: string): Promise<string>;
 }
