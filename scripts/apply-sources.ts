@@ -16,7 +16,7 @@ function normalizeURL(url: string) {
 
 // 定义固定的权重，便于给一些站点提升排名
 const CONSTANT_WEITGHT_MAP = {
-  "https://www.phdeck.com": 100,
+  "https://www.phdeck.com": 101,
 };
 
 // 定义读取JSON文件的异步函数
@@ -42,26 +42,29 @@ async function applySources(localSourcesPath: string, rssJsonPath: string): Prom
   const rssSourcesMap = new Map(rssSources.map((source) => [source.url, source]));
 
   // 遍历localSources，合并或添加到rssSourcesMap
-  localSources.forEach((localSource) => {
-    const rssSource = rssSourcesMap.get(localSource.url);
-    if (rssSource) {
-      const constWeight = CONSTANT_WEITGHT_MAP[normalizeURL(rssSource.url)];
-      // 如果存在重复，则进行合并（保留title、description、tags）
-      rssSource.url = localSource.url;
-      rssSource.rssLink = localSource.rssLink;
-      rssSource.favicon = localSource.favicon;
-      rssSource.available = localSource.available;
-      rssSource.weight = constWeight ? constWeight : localSource.weight;
-      rssSource.activeScore = localSource.activeScore;
-      rssSource.activeStatus = localSource.activeStatus;
+  localSources
+    // 只保留权重大于5的源，小于5认为是不活跃，不必保留
+    .filter((s) => (s.weight ?? 1) > 5)
+    .forEach((localSource) => {
+      const rssSource = rssSourcesMap.get(localSource.url);
+      if (rssSource) {
+        const constWeight = CONSTANT_WEITGHT_MAP[normalizeURL(rssSource.url)];
+        // 如果存在重复，则进行合并（保留title、description、tags）
+        rssSource.url = localSource.url;
+        rssSource.rssLink = localSource.rssLink;
+        rssSource.favicon = localSource.favicon;
+        rssSource.available = localSource.available;
+        rssSource.weight = constWeight ? constWeight : localSource.weight;
+        rssSource.activeScore = localSource.activeScore;
+        rssSource.activeStatus = localSource.activeStatus;
 
-      rssSource.description = rssSource.description || localSource.description;
-      rssSource.tags = (rssSource.tags || []).length === 0 ? localSource.tags : rssSource.tags;
-    } else {
-      // 如果不存在，则添加
-      rssSourcesMap.set(localSource.url, localSource);
-    }
-  });
+        rssSource.description = rssSource.description || localSource.description;
+        rssSource.tags = (rssSource.tags || []).length === 0 ? localSource.tags : rssSource.tags;
+      } else {
+        // 如果不存在，则添加
+        rssSourcesMap.set(localSource.url, localSource);
+      }
+    });
 
   // 将Map对象转换回数组
   const updatedRssSources = Array.from(rssSourcesMap.values());

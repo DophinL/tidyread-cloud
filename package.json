@@ -8,7 +8,7 @@
     "start": "next start",
     "i18n": "tsx scripts/i18n.ts",
     "gen-sources": "tsx scripts/gen-sources/index.ts",
-    "apply-sources": "tsx scripts/apply-sources.ts",
+    "apply-sources": "tsx scripts/apply-sources.ts && eslint --fix 'data/rss.json'",
     "gen-tags": "env-cmd tsx scripts/gen-tags.ts && eslint --fix 'data/rss.json'",
     "lint-fix-scripts": "eslint --fix 'scripts/**/*.{js,jsx,ts,tsx}'",
     "lint-fix-all": "next lint --fix",

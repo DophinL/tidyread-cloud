@@ -33,7 +33,7 @@ export async function generateSource(url: string): Promise<ExternalSource> {
   logger.info("====== start to compute activity ======");
   // 计算权重、活跃度等指标
   const activeScore = calculateActivityScoreNormalized(feed.items);
-  // 5分以下都算不活跃。周更27分，月更6分。
+  // 5分以下都算不活跃。周更27分，月更7分。
   const activeStatus = activeScore > 5 ? "active" : "inactive";
   logger.info(activeScore, activeStatus, "activity:");
 
