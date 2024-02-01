@@ -8,3 +8,4 @@ public/sitemap*.xml
 .DS_Store
 
 local.*
+.env

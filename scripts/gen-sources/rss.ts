@@ -1,6 +1,6 @@
 import Parser from "rss-parser";
 import { request } from "./request";
-import { createAgent, isURL } from "./util";
+import { createAgent, isURL } from "../util";
 import { RawFeed } from "../types";
 
 const parser = new Parser({

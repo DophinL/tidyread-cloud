@@ -1,5 +1,5 @@
 import fetch, { RequestInit } from "node-fetch";
-import { createAgent, withTimeout } from "./util";
+import { createAgent, withTimeout } from "../util";
 import { load } from "cheerio";
 
 interface Metadata {

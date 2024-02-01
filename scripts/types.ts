@@ -33,3 +33,23 @@ export interface RawFeed {
   items: RSSItem[];
   description?: string;
 }
+
+export interface ProviderOptions {
+  apiKey?: string;
+  apiHost?: string;
+  apiModel?: string;
+  maxTokens?: number;
+  httpProxy?: string;
+}
+
+export abstract class Provider {
+  available: boolean = true;
+
+  // 定义构造函数和它的参数
+  constructor(protected options: ProviderOptions) {
+    // 初始化操作
+  }
+
+  // 定义一个抽象方法
+  abstract ask(prompt: string, content: string): Promise<string>;
+}

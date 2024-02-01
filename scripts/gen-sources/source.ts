@@ -4,7 +4,7 @@ import { calculateActivityScoreNormalized } from "./recommend";
 import { fetchMetadata } from "./request";
 import { isValidRSSLink, parseRSS } from "./rss";
 import { ExternalSource } from "../types";
-import { retry } from "./util";
+import { retry } from "../util";
 
 const limit = pLimit(10);
 
