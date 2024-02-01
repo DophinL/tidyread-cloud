@@ -11,48 +11,41 @@ const localRSSYamlPath = path.join(__dirname, "../../local.rss.yaml");
 const localSourcesJsonPath = path.join(__dirname, "../../local.sources.json");
 
 async function main() {
-    // 解析 local.rss.yaml
-    const yamlContent = await fs.readFile(localRSSYamlPath, "utf8"); // 调整为正确的路径
-    const urls = yaml.parse(yamlContent);
-    console.info(urls, "yaml parsed urls:");
+  // 解析 local.rss.yaml
+  const yamlContent = await fs.readFile(localRSSYamlPath, "utf8"); // 调整为正确的路径
+  const urls = yaml.parse(yamlContent);
+  console.info(urls, "yaml parsed urls:");
 
-    // 读取 local.sources.json 中已经存在的source
-    let existingSources;
-    try {
-        const sourcesJsonContent = await fs.readFile(
-            localSourcesJsonPath,
-            "utf8"
-        ); // 调整为正确的路径
-        existingSources = JSON.parse(sourcesJsonContent);
-    } catch (error) {
-        // 如果文件不存在，则初始化为空数组
-        existingSources = [];
-    }
+  // 读取 local.sources.json 中已经存在的source
+  let existingSources;
+  try {
+    const sourcesJsonContent = await fs.readFile(localSourcesJsonPath, "utf8"); // 调整为正确的路径
+    existingSources = JSON.parse(sourcesJsonContent);
+  } catch (error) {
+    // 如果文件不存在，则初始化为空数组
+    existingSources = [];
+  }
 
-    const existingUrls = existingSources.map((source) => source.rssLink);
+  const existingUrls = existingSources.map((source) => source.rssLink);
 
-    // 过滤掉已经存在的source
-    const newUrls = urls.filter((url) => !existingUrls.includes(url));
+  // 过滤掉已经存在的source
+  const newUrls = urls.filter((url) => !existingUrls.includes(url));
 
-    // 将剩余url进行 generateSources
-    const { success, failed } = await generateSources(newUrls);
+  // 将剩余url进行 generateSources
+  const { success, failed } = await generateSources(newUrls);
 
-    // 打印失败的URL和错误信息，以便调试
-    failed.forEach(({ url, error }) => {
-        logger.error(`Failed to process ${url}: ${error.message}`);
-    });
+  // 打印失败的URL和错误信息，以便调试
+  failed.forEach(({ url, error }) => {
+    logger.error(`Failed to process ${url}: ${error.message}`);
+  });
 
-    // 拿出成功的sources，追加到 local.sources.json 中
-    const updatedSources = existingSources.concat(success);
-    await fs.writeFile(
-        localSourcesJsonPath,
-        JSON.stringify(updatedSources, null, 2),
-        "utf8"
-    ); // 调整为正确的路径
+  // 拿出成功的sources，追加到 local.sources.json 中
+  const updatedSources = existingSources.concat(success);
+  await fs.writeFile(localSourcesJsonPath, JSON.stringify(updatedSources, null, 2), "utf8"); // 调整为正确的路径
 
-    logger.info(
-        `Successfully updated sources. Total: ${updatedSources.length}, Newly added: ${success.length}, Failed: ${failed.length}`
-    );
+  logger.info(
+    `Successfully updated sources. Total: ${updatedSources.length}, Newly added: ${success.length}, Failed: ${failed.length}`,
+  );
 }
 
 main().catch(console.error);

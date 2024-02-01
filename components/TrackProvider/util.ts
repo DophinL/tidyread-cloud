@@ -1,10 +1,9 @@
-import { JsonType, posthog } from 'posthog-js';
-import { useCallback, useEffect, useState } from 'react';
+import { JsonType, posthog } from "posthog-js";
+import { useCallback, useEffect, useState } from "react";
 
-import { convertObject } from '@/utils/object';
+import { convertObject } from "@/utils/object";
 
-import { GLOBAL_DISABLED } from './global';
-
+import { GLOBAL_DISABLED } from "./global";
 
 const defaultOptions = {
   sendInstantly: false,
@@ -23,11 +22,7 @@ function useForceRender() {
 /**
  * 埋点
  */
-export function track(
-  eventName: string,
-  data?: Record<string, any>,
-  options?: { sendInstantly?: boolean },
-) {
+export function track(eventName: string, data?: Record<string, any>, options?: { sendInstantly?: boolean }) {
   if (GLOBAL_DISABLED) return;
   const mergedOptions = { ...defaultOptions, ...options };
   try {
@@ -35,7 +30,7 @@ export function track(
       send_instantly: mergedOptions?.sendInstantly,
     });
   } catch (err) {
-    console.error('posthog track error:', err);
+    console.error("posthog track error:", err);
   }
 }
 
@@ -49,7 +44,7 @@ export function initUser(user: { id: string | number; [k: string]: any }) {
   try {
     posthog.identify(`${id}`, otherProps);
   } catch (err) {
-    console.error('posthog initUser error:', err);
+    console.error("posthog initUser error:", err);
   }
 
   Promise.resolve().then(() => {
@@ -61,16 +56,12 @@ export function initUser(user: { id: string | number; [k: string]: any }) {
 /**
  * 设置分组信息（如tenant）
  */
-export function setGroup(
-  groupName: string,
-  groupId: string,
-  properties: Record<string, any>,
-) {
+export function setGroup(groupName: string, groupId: string, properties: Record<string, any>) {
   if (GLOBAL_DISABLED) return;
   try {
     posthog.group(groupName, groupId, properties);
   } catch (err) {
-    console.error('posthog setGroup error:', err);
+    console.error("posthog setGroup error:", err);
   }
 }
 
@@ -84,11 +75,9 @@ export function isFeatureEnabled(featureName: string): boolean {
   // 考虑兼容next.js服务端渲染，否则会报错
   try {
     // 服务端渲染的时候默认没有
-    return typeof window === 'undefined'
-      ? false
-      : posthog.isFeatureEnabled(featureName) ?? false;
+    return typeof window === "undefined" ? false : posthog.isFeatureEnabled(featureName) ?? false;
   } catch (err) {
-    console.error('posthog isFeatureEnabled error:', err);
+    console.error("posthog isFeatureEnabled error:", err);
     // 出错默认认为有该feature
     return true;
   }

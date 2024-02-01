@@ -10,45 +10,45 @@ let initialized = false;
  * @returns
  */
 export default function TrackProvider({
-    children,
-    config,
-    disabled = false,
+  children,
+  config,
+  disabled = false,
 }: {
-    children: React.ReactNode;
-    config: any;
-    disabled?: boolean;
+  children: React.ReactNode;
+  config: any;
+  disabled?: boolean;
 }) {
-    if (typeof window !== "undefined") {
-        setGlobalDisabled(disabled!);
-    } else {
-        // 服务端渲染时，默认disabled
-        setGlobalDisabled(true);
-    }
+  if (typeof window !== "undefined") {
+    setGlobalDisabled(disabled!);
+  } else {
+    // 服务端渲染时，默认disabled
+    setGlobalDisabled(true);
+  }
 
-    // 初始化posthog
-    if (typeof window !== "undefined" && !initialized && !GLOBAL_DISABLED) {
-        const { api_key, ...otherConfig } = config;
+  // 初始化posthog
+  if (typeof window !== "undefined" && !initialized && !GLOBAL_DISABLED) {
+    const { api_key, ...otherConfig } = config;
 
-        posthog.init(api_key, {
-            ...otherConfig,
-        });
-        initialized = true;
-    }
+    posthog.init(api_key, {
+      ...otherConfig,
+    });
+    initialized = true;
+  }
 
-    useEffect(() => {
-        // Track page views
-        const handleRouteChange = () => {
-            posthog.capture("$pageview");
-        };
+  useEffect(() => {
+    // Track page views
+    const handleRouteChange = () => {
+      posthog.capture("$pageview");
+    };
 
-        Router.events.on("routeChangeComplete", handleRouteChange);
+    Router.events.on("routeChangeComplete", handleRouteChange);
 
-        return () => {
-          Router.events.off("routeChangeComplete", handleRouteChange);
-        };
-    }, []);
+    return () => {
+      Router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
 
-    // TODO: 当route变化时，重新reloadFeature。这个目前意义不大
+  // TODO: 当route变化时，重新reloadFeature。这个目前意义不大
 
-    return <>{children}</>;
+  return <>{children}</>;
 }
