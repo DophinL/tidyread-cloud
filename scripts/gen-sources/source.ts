@@ -28,14 +28,14 @@ export async function generateSource(url: string): Promise<ExternalSource> {
   const sourceUrl = feed.link;
   const description = feed.description ?? "";
 
-  logger.info(feed.title, "parsed content:");
+  logger.info(`parsed content: ${feed.link}`);
 
   logger.info("====== start to compute activity ======");
   // 计算权重、活跃度等指标
   const activeScore = calculateActivityScoreNormalized(feed.items);
   // 5分以下都算不活跃。周更27分，月更7分。
   const activeStatus = activeScore > 5 ? "active" : "inactive";
-  logger.info(activeScore, activeStatus, "activity:");
+  logger.info(`activity: ${activeScore}, ${activeStatus}`);
 
   logger.info("====== start to compute weight ======");
 
@@ -43,7 +43,7 @@ export async function generateSource(url: string): Promise<ExternalSource> {
   // TODO: 后续可考虑 社交媒体透出、网站流量权重、用户阅读情况等因素
   const weight = activeScore;
 
-  logger.info(weight, "weight:");
+  logger.info(`weight: ${weight}`);
 
   logger.info("====== start to fetch metadata ======");
   // 抓取favicon

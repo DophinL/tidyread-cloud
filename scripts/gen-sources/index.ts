@@ -46,6 +46,12 @@ async function main() {
   logger.info(
     `Successfully updated sources. Total: ${updatedSources.length}, Newly added: ${success.length}, Failed: ${failed.length}`,
   );
+
+  logger.error(
+    failed.map((item) => item.url),
+    // failed,
+    "Failed items:",
+  );
 }
 
 main().catch(console.error);
