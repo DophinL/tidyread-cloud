@@ -66,7 +66,7 @@
     "favicon": "https://www.businessinsider.com/public/assets/BI/US/favicons/apple-touch-icon-192x192.png?v=2023-11"
   },
   {
-    "tags": ["Finance"],
+    "tags": ["Finance", "Economics"],
     "url": "https://www.economist.com/latest/",
     "rssLink": "https://rsshub.app/economist/latest",
     "title": "The Economist",
