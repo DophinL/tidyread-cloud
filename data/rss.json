@@ -484,5 +484,17 @@
     "activeScore": 5.56,
     "description": "Just another WordPress site",
     "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.mdpi.com/journal/sustainability",
+    "rssLink": "https://www.mdpi.com/rss/journal/sustainability",
+    "title": "Sustainability",
+    "favicon": "https://pub.mdpi-res.com/img/journals/sustainability-logo-sq.png?8600e93ff98dbf14",
+    "weight": 100,
+    "activeStatus": "active",
+    "activeScore": 100,
+    "description": "Latest open access articles published in Sustainability at https://www.mdpi.com/journal/sustainability",
+    "tags": ["Academic"]
   }
 ]

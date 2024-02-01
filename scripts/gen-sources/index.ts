@@ -16,6 +16,8 @@ const args = minimist(process.argv.slice(2));
 // 获取tags参数
 const tags = args.tags ?? "";
 
+// console.log("args", args, tags);
+
 async function main() {
   // 解析 local.rss.yaml
   const yamlContent = await fs.readFile(localRSSYamlPath, "utf8"); // 调整为正确的路径
