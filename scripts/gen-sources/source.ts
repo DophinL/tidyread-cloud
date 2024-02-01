@@ -8,7 +8,7 @@ import { retry } from "../util";
 
 const limit = pLimit(10);
 
-export async function generateSource(url: string): Promise<ExternalSource> {
+export async function generateSource(url: string, defaultTags?: string[]): Promise<ExternalSource> {
   // 验证rss是否可用，不可用的话，取不到link、title等信息，也无法取到items进行活跃度计算，这种情况直接报错
   let isValid = false;
   try {
@@ -51,7 +51,7 @@ export async function generateSource(url: string): Promise<ExternalSource> {
   logger.info(metadata, "metadata:");
 
   // TODO: gpt 输出 tags
-  const tags = [];
+  const tags = [...(defaultTags ?? [])];
 
   // 生成source
   return {
@@ -68,13 +68,16 @@ export async function generateSource(url: string): Promise<ExternalSource> {
   };
 }
 
-export async function generateSources(urls: string[]): Promise<{
+export async function generateSources(
+  urls: string[],
+  defaultTags?: string[],
+): Promise<{
   success: ExternalSource[];
   failed: { url: string; error: Error }[];
 }> {
   const promises = urls.map((url) =>
     limit(() =>
-      generateSource(url).catch((err) => ({
+      generateSource(url, defaultTags).catch((err) => ({
         url,
         error: err,
       })),

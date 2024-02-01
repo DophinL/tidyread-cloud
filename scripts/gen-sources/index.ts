@@ -6,9 +6,15 @@ import yaml from "yaml";
 import { generateSources } from "./source"; // 调整为正确的路径
 import logger from "../logger";
 import path from "path";
+import minimist from "minimist";
 
 const localRSSYamlPath = path.join(__dirname, "../../local.rss.yaml");
 const localSourcesJsonPath = path.join(__dirname, "../../local.sources.json");
+
+// 解析命令行参数
+const args = minimist(process.argv.slice(2));
+// 获取tags参数
+const tags = args.tags ?? "";
 
 async function main() {
   // 解析 local.rss.yaml
@@ -31,8 +37,9 @@ async function main() {
   // 过滤掉已经存在的source
   const newUrls = urls.filter((url) => !existingUrls.includes(url));
 
+  const defaultTags = tags ? tags.split(",") : undefined;
   // 将剩余url进行 generateSources
-  const { success, failed } = await generateSources(newUrls);
+  const { success, failed } = await generateSources(newUrls, defaultTags);
 
   // 打印失败的URL和错误信息，以便调试
   failed.forEach(({ url, error }) => {
