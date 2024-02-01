@@ -376,5 +376,113 @@
     "activeScore": 100,
     "description": "",
     "tags": ["Product"]
+  },
+  {
+    "available": true,
+    "url": "https://www.sciencedaily.com/news/mind_brain/psychology/",
+    "rssLink": "https://www.sciencedaily.com/rss/mind_brain/psychology.xml",
+    "title": "Psychology Research News -- ScienceDaily",
+    "favicon": "",
+    "weight": 100,
+    "activeStatus": "active",
+    "activeScore": 100,
+    "description": "Learn about the brain, behavior and health. Read health articles on intellectual development, brain abnormalities, and mental health. Updated daily.",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.spring.org.uk/",
+    "rssLink": "https://www.spring.org.uk/feed",
+    "title": "PsyBlog",
+    "favicon": "",
+    "weight": 100,
+    "activeStatus": "active",
+    "activeScore": 100,
+    "description": "",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.psypost.org/",
+    "rssLink": "https://www.psypost.org/feed",
+    "title": "PsyPost",
+    "favicon": "https://www.psypost.org/wp-content/uploads/2023/11/cropped-PsyPost-blue-brain-logo-no-name-no-background-much-brighter-32x32.png",
+    "weight": 55.56,
+    "activeStatus": "active",
+    "activeScore": 55.56,
+    "description": "Reporting the latest scientific research on behavior, cognition and society",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://positivepsychology.com/",
+    "rssLink": "https://positivepsychology.com/feed/",
+    "title": "PositivePsychology.com",
+    "favicon": "https://positive.b-cdn.net/wp-content/uploads/favicon.ico",
+    "weight": 27.78,
+    "activeStatus": "active",
+    "activeScore": 27.78,
+    "description": "Helping You Help Others",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.frontiersin.org/journals/psychology",
+    "rssLink": "https://www.frontiersin.org/journals/psychology/rss",
+    "title": "Frontiers in Psychology | New and Recent Articles",
+    "favicon": "https://brand.frontiersin.org/m/ed3f9ce840a03d7/favicon_16-tenantFavicon-Frontiers.png",
+    "weight": 55.56,
+    "activeStatus": "active",
+    "activeScore": 55.56,
+    "description": "RSS Feed for Frontiers in Psychology | New and Recent Articles",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.nationalelfservice.net",
+    "rssLink": "https://www.nationalelfservice.net/mental-health/feed/",
+    "title": "Mental health - National Elf Service",
+    "favicon": "",
+    "weight": 27.78,
+    "activeStatus": "active",
+    "activeScore": 27.78,
+    "description": "No bias. No misinformation. No spin. Just what you need!",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://psyche.co",
+    "rssLink": "https://psyche.co/feed",
+    "title": "Psyche | on the human condition",
+    "favicon": "https://psyche.co/favicon-32x32.png",
+    "weight": 55.56,
+    "activeStatus": "active",
+    "activeScore": 55.56,
+    "description": "Psyche is a digital magazine from Aeon Media that illuminates the human condition through psychology, philosophy and the arts.",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.theguardian.com/science/psychology",
+    "rssLink": "https://www.theguardian.com/science/psychology/rss",
+    "title": "Psychology | The Guardian",
+    "favicon": "https://assets.guim.co.uk/images/favicons/46bd2faa1ab438684a6d4528a655a8bd/32x32.ico",
+    "weight": 55.56,
+    "activeStatus": "active",
+    "activeScore": 55.56,
+    "description": "Latest news and features from theguardian.com, the world's leading liberal voice",
+    "tags": ["Psychology"]
+  },
+  {
+    "available": true,
+    "url": "https://www.mentalhelp.net",
+    "rssLink": "https://www.mentalhelp.net/blogs/feed/",
+    "title": "Blog – Mental Help",
+    "favicon": "https://www.mentalhelp.net/content/themes/mentalhelp/assets/img/favicon-196x196.png",
+    "weight": 5.56,
+    "activeStatus": "active",
+    "activeScore": 5.56,
+    "description": "Just another WordPress site",
+    "tags": ["Psychology"]
   }
 ]

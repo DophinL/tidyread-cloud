@@ -41,6 +41,8 @@ async function applySources(localSourcesPath: string, rssJsonPath: string): Prom
   // 将data/rss.json中的源映射为一个以URL为键的对象，以便快速查找
   const rssSourcesMap = new Map(rssSources.map((source) => [normalizeURL(source.url), source]));
 
+  const lowScoreLocalSources = localSources.filter((s) => (s.weight ?? 1) <= 5);
+
   // 遍历localSources，合并或添加到rssSourcesMap
   localSources
     // 只保留权重大于5的源，小于5认为是不活跃，不必保留
@@ -73,6 +75,7 @@ async function applySources(localSourcesPath: string, rssJsonPath: string): Prom
   await writeJsonFile(rssJsonPath, updatedRssSources);
 
   logger.info("Sources have been successfully applied.");
+  logger.warn(lowScoreLocalSources, "These sources have been filtered.");
 }
 
 // 调用applySources函数
