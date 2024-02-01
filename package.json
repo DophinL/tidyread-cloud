@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "i18n": "tsx scripts/i18n.ts",
-    "gen-sources": "tsx scripts/gen-sources.ts",
-    "supply-sources": "tsx scripts/supply-sources.ts",
+    "gen-sources": "tsx scripts/gen-sources/index.ts",
+    "apply-sources": "tsx scripts/apply-sources.ts",
     "postbuild": "echo 'testlzyzy' && next-sitemap && rm -rf .next/cache"
   },
   "repository": {
@@ -22,18 +22,27 @@
   },
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
+    "cheerio": "1.0.0-rc.12",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dayjs": "^1.11.10",
+    "https-proxy-agent": "^7.0.2",
     "lodash": "^4.17.21",
     "lucide-react": "^0.311.0",
     "next": "13.4.19",
     "nextra": "^2.13.2",
     "nextra-theme-docs": "^2.13.2",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^4.0.0",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1",
     "posthog-js": "^1.100.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rss-parser": "^3.13.0",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
