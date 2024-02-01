@@ -31,4 +31,5 @@ export interface RawFeed {
   link: string;
   feedUrl: string;
   items: RSSItem[];
+  description?: string;
 }

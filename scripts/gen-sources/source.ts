@@ -6,10 +6,6 @@ import { isValidRSSLink, parseRSS } from "./rss";
 import { ExternalSource } from "../types";
 import { retry } from "./util";
 
-const COSNTANT_WEITGHT_LIST = {
-    "https://www.producthunt.com/feed": 100,
-};
-
 const limit = pLimit(10);
 
 export async function generateSource(url: string): Promise<ExternalSource> {
@@ -28,7 +24,10 @@ export async function generateSource(url: string): Promise<ExternalSource> {
     // 抓取RSS的link、title等信息
     logger.info("====== start to parse rss ======");
     const feed = await parseRSS(url);
+    const sourceTitle = feed.title;
     const sourceUrl = feed.link;
+    const description = feed.description ?? "";
+
     logger.info(feed.title, "parsed content:");
 
     logger.info("====== start to compute activity ======");
@@ -42,33 +41,30 @@ export async function generateSource(url: string): Promise<ExternalSource> {
 
     // 计算权重，目前按照活跃度和 COSNTANT_WEITGHT_LIST 来计算
     // TODO: 后续可考虑 社交媒体透出、网站流量权重、用户阅读情况等因素
-    const weight =
-        COSNTANT_WEITGHT_LIST[url] === undefined
-            ? activeScore
-            : COSNTANT_WEITGHT_LIST[url];
+    const weight = activeScore;
 
     logger.info(weight, "weight:");
 
     logger.info("====== start to fetch metadata ======");
-    // 抓取favicon和title
+    // 抓取favicon
     const metadata = await fetchMetadata(sourceUrl);
     logger.info(metadata, "metadata:");
 
     // TODO: gpt 输出 tags
-
-    // TODO: gpt 输出 description
+    const tags = [];
 
     // 生成source
     return {
         available: true,
         url: sourceUrl,
         rssLink: url,
-        title: metadata.title,
+        title: sourceTitle,
         favicon: metadata.favicon,
         weight,
         activeStatus,
         activeScore,
-        tags: [],
+        description,
+        tags,
     };
 }
 

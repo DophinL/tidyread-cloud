@@ -63,5 +63,65 @@
         "tags": ["General"],
         "rssLink": "https://chaski.huffpost.com/us/auto/vertical/world-news",
         "favicon": "https://www.huffpost.com/favicon.ico"
+    },
+    {
+        "available": true,
+        "url": "https://www.scotthyoung.com/blog/",
+        "rssLink": "https://www.scotthyoung.com/blog/feed/",
+        "title": "Scott H Young",
+        "favicon": "https://www.scotthyoung.com/blog/wp-content/uploads/2019/05/favicon.png",
+        "weight": 14.44,
+        "activeStatus": "active",
+        "activeScore": 14.44,
+        "description": "Learn faster, achieve more",
+        "tags": []
+    },
+    {
+        "available": true,
+        "url": "https://github.com/SwiftOldDriver/iOS-Weekly/releases",
+        "rssLink": "https://github.com/SwiftOldDriver/iOS-Weekly/releases.atom",
+        "title": "Release notes from iOS-Weekly",
+        "favicon": "https://github.githubassets.com/favicons/favicon.svg",
+        "weight": 9.44,
+        "activeStatus": "active",
+        "activeScore": 9.44,
+        "description": "",
+        "tags": []
+    },
+    {
+        "available": true,
+        "url": "https://www.kymjs.com/",
+        "rssLink": "https://www.kymjs.com/feed.xml",
+        "title": "开源实验室",
+        "favicon": "",
+        "weight": 0,
+        "activeStatus": "inactive",
+        "activeScore": 0,
+        "description": "张涛的开源实验室",
+        "tags": []
+    },
+    {
+        "available": true,
+        "url": "https://ncase.me/",
+        "rssLink": "https://ncase.me/feed.xml",
+        "title": "Nicky's New Shtuff",
+        "favicon": "https://ncase.me/favicon.png",
+        "weight": 0,
+        "activeStatus": "inactive",
+        "activeScore": 0,
+        "description": "New Shtuff from Nicky Case",
+        "tags": []
+    },
+    {
+        "available": true,
+        "url": "https://diygod.cc",
+        "rssLink": "https://diygod.cc/feed",
+        "title": "Hi, DIYgod",
+        "favicon": "https://ipfs.crossbell.io/ipfs/bafybeibefx2tyow77m2wcnsh5anaaxfy7ypxbcuapb52c4h255onqp72ye",
+        "weight": 6.67,
+        "activeStatus": "active",
+        "activeScore": 6.67,
+        "description": "写代码是热爱，写到世界充满爱！",
+        "tags": []
     }
 ]

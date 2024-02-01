@@ -10,6 +10,15 @@ import logger from "./logger";
 const localSourcesJsonPath = path.join(__dirname, "../local.sources.json");
 const rssJsonPath = path.join(__dirname, "../data/rss.json");
 
+function normalizeURL(url: string) {
+    return url.replace(/\/$/, "");
+}
+
+// 定义固定的权重，便于给一些站点提升排名
+const CONSTANT_WEITGHT_MAP = {
+    "https://www.phdeck.com": 100,
+};
+
 // 定义读取JSON文件的异步函数
 async function readJsonFile<T>(filePath: string): Promise<T> {
     const content = await fs.readFile(filePath, "utf8");
@@ -18,7 +27,7 @@ async function readJsonFile<T>(filePath: string): Promise<T> {
 
 // 定义保存JSON文件的异步函数
 async function writeJsonFile(filePath: string, data: any): Promise<void> {
-    const content = JSON.stringify(data, null, 2);
+    const content = JSON.stringify(data, null, 4);
     await fs.writeFile(filePath, content, "utf8");
 }
 
@@ -45,14 +54,23 @@ async function applySources(
     localSources.forEach((localSource) => {
         const rssSource = rssSourcesMap.get(localSource.url);
         if (rssSource) {
+            const constWeight =
+                CONSTANT_WEITGHT_MAP[normalizeURL(rssSource.url)];
             // 如果存在重复，则进行合并（保留title、description、tags）
             rssSource.url = localSource.url;
             rssSource.rssLink = localSource.rssLink;
             rssSource.favicon = localSource.favicon;
             rssSource.available = localSource.available;
-            rssSource.weight = localSource.weight;
+            rssSource.weight = constWeight ? constWeight : localSource.weight;
             rssSource.activeScore = localSource.activeScore;
             rssSource.activeStatus = localSource.activeStatus;
+            
+            rssSource.description =
+                rssSource.description || localSource.description;
+            rssSource.tags =
+                (rssSource.tags || []).length === 0
+                    ? localSource.tags
+                    : rssSource.tags;
         } else {
             // 如果不存在，则添加
             rssSourcesMap.set(localSource.url, localSource);
