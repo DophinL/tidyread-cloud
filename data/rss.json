@@ -4,7 +4,12 @@
     "rssLink": "https://news.ycombinator.com/rss",
     "title": "Hacker News",
     "tags": ["Technology"],
-    "favicon": "https://news.ycombinator.com/y18.svg"
+    "favicon": "https://news.ycombinator.com/y18.svg",
+    "available": true,
+    "weight": 83.33,
+    "activeScore": 83.33,
+    "activeStatus": "active",
+    "description": "Links for the intellectually curious, ranked by readers."
   },
   {
     "url": "https://www.phdeck.com/",
@@ -22,21 +27,36 @@
     "tags": ["AI"],
     "url": "https://www.ainvest.com/news",
     "title": "AInvest",
-    "favicon": "https://www.ainvest.com/wencai-ssr/_nuxt/icons/icon_64x64.d7847c.png"
+    "favicon": "https://www.ainvest.com/wencai-ssr/_nuxt/icons/icon_64x64.d7847c.png",
+    "available": true,
+    "weight": 83.33,
+    "activeScore": 83.33,
+    "activeStatus": "active",
+    "description": "AInvest - Latest Articles - Made with love by RSSHub(https://github.com/DIYgod/RSSHub)"
   },
   {
     "rssLink": "https://www.technologyreview.com/feed/",
     "tags": ["Technology"],
-    "url": "https://www.technologyreview.com/",
+    "url": "https://www.technologyreview.com",
     "title": "MIT Technology Review",
-    "favicon": "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93ddf5feb5405dd4cc.ico"
+    "favicon": "https://www.technologyreview.com/static/media/favicon.1cfcdb44759a0f93ddf5feb5405dd4cc.ico",
+    "available": true,
+    "weight": 27.78,
+    "activeScore": 27.78,
+    "activeStatus": "active",
+    "description": ""
   },
   {
     "url": "https://www.investopedia.com",
     "title": "Investopedia",
     "rssLink": "https://www.investopedia.com/feedbuilder/feed/getfeed?feedName=rss_articles",
     "tags": ["Finance"],
-    "favicon": "https://www.investopedia.com/favicon.ico"
+    "favicon": "https://www.investopedia.com/favicon.ico",
+    "available": true,
+    "weight": 100,
+    "activeScore": 100,
+    "activeStatus": "active",
+    "description": "Investopedia.com RSS Feeds"
   },
   {
     "rssLink": "https://feeds.businessinsider.com/custom/all",
@@ -47,24 +67,39 @@
   },
   {
     "tags": ["Finance"],
-    "url": "https://www.economist.com/latest",
+    "url": "https://www.economist.com/latest/",
     "rssLink": "https://rsshub.app/economist/latest",
     "title": "The Economist",
-    "favicon": "https://www.economist.com/favicon.ico"
+    "favicon": "https://www.economist.com/favicon.ico",
+    "available": true,
+    "weight": 83.33,
+    "activeScore": 83.33,
+    "activeStatus": "active",
+    "description": "The most recent blogs and online articles from The Economist - Made with love by RSSHub(https://github.com/DIYgod/RSSHub)"
   },
   {
     "url": "https://www.buzzfeednews.com",
     "rssLink": "https://www.buzzfeednews.com/news.xml",
     "title": "BuzzFeed News",
     "tags": ["General"],
-    "favicon": "https://www.buzzfeednews.com/static-assets/img/favicon.40f4055ea10bb11593f4c85d55164232.ico"
+    "favicon": "https://www.buzzfeednews.com/static-assets/img/favicon.40f4055ea10bb11593f4c85d55164232.ico",
+    "available": true,
+    "weight": 100,
+    "activeScore": 100,
+    "activeStatus": "active",
+    "description": "BuzzFeed, Reporting To You"
   },
   {
-    "title": "HuffPost",
-    "url": "https://www.huffpost.com/",
-    "tags": ["General"],
+    "available": true,
+    "url": "https://www.huffpost.com/news/world-news",
     "rssLink": "https://chaski.huffpost.com/us/auto/vertical/world-news",
-    "favicon": "https://www.huffpost.com/favicon.ico"
+    "title": "World News",
+    "favicon": "https://www.huffpost.com/favicon.ico",
+    "weight": 30.56,
+    "activeStatus": "active",
+    "activeScore": 30.56,
+    "description": "HuffPost - United States",
+    "tags": ["General"]
   },
   {
     "available": true,
@@ -328,6 +363,18 @@
     "activeStatus": "active",
     "activeScore": 83.33,
     "description": "Tech News, Reviews, Deals, and How-To's",
+    "tags": []
+  },
+  {
+    "available": true,
+    "url": "https://www.producthunt.com",
+    "rssLink": "https://www.producthunt.com/feed",
+    "title": "Product Hunt",
+    "favicon": "https://ph-static.imgix.net/ph-favicon-coral.ico",
+    "weight": 100,
+    "activeStatus": "active",
+    "activeScore": 100,
+    "description": "",
     "tags": []
   }
 ]
