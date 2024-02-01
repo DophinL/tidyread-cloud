@@ -39,14 +39,14 @@ async function applySources(localSourcesPath: string, rssJsonPath: string): Prom
   const rssSources: ExternalSource[] = await readJsonFile<ExternalSource[]>(rssJsonPath);
 
   // 将data/rss.json中的源映射为一个以URL为键的对象，以便快速查找
-  const rssSourcesMap = new Map(rssSources.map((source) => [source.url, source]));
+  const rssSourcesMap = new Map(rssSources.map((source) => [normalizeURL(source.url), source]));
 
   // 遍历localSources，合并或添加到rssSourcesMap
   localSources
     // 只保留权重大于5的源，小于5认为是不活跃，不必保留
     .filter((s) => (s.weight ?? 1) > 5)
     .forEach((localSource) => {
-      const rssSource = rssSourcesMap.get(localSource.url);
+      const rssSource = rssSourcesMap.get(normalizeURL(localSource.url));
       if (rssSource) {
         const constWeight = CONSTANT_WEITGHT_MAP[normalizeURL(rssSource.url)];
         // 如果存在重复，则进行合并（保留title、description、tags）

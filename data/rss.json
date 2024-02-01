@@ -13,12 +13,14 @@
     "tags": ["Product"],
     "favicon": "https://www.phdeck.com/favicon.ico",
     "description": "A more efficient way to browse Product Hunt",
-    "weight": 101
+    "weight": 101,
+    "activeStatus": "active",
+    "activeScore": 100
   },
   {
     "rssLink": "https://rsshub.app/ainvest/article",
     "tags": ["AI"],
-    "url": "https://www.ainvest.com/",
+    "url": "https://www.ainvest.com/news",
     "title": "AInvest",
     "favicon": "https://www.ainvest.com/wencai-ssr/_nuxt/icons/icon_64x64.d7847c.png"
   },
@@ -45,7 +47,7 @@
   },
   {
     "tags": ["Finance"],
-    "url": "https://www.economist.com/",
+    "url": "https://www.economist.com/latest",
     "rssLink": "https://rsshub.app/economist/latest",
     "title": "The Economist",
     "favicon": "https://www.economist.com/favicon.ico"
