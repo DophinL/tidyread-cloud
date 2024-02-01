@@ -14,7 +14,7 @@ export function calculateActivityScoreNormalized(
   let longTermCount = 0;
 
   rssItems.forEach((item) => {
-    const pubDate = new Date(item.pubDate as string);
+    const pubDate = item.pubDate ? new Date(item.pubDate as number) : new Date();
     const timeDiff = currentDate.getTime() - pubDate.getTime();
     const daysAgo = timeDiff / (1000 * 3600 * 24);
 
@@ -29,8 +29,8 @@ export function calculateActivityScoreNormalized(
   const shortTermScore = (shortTermCount / maxShortTermUpdates) * 100;
   const longTermScore = (longTermCount / maxLongTermUpdates) * 100;
 
-  // 计算平均得分，并确保得分不超过100
-  let averageScore = (shortTermScore + longTermScore) / 2;
+  // 短期权重更高
+  let averageScore = shortTermScore * 0.8 + longTermScore * 0.2;
   averageScore = Math.min(100, averageScore); // 限制最高得分为100
 
   return round(averageScore, 2);
