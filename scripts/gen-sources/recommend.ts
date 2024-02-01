@@ -1,5 +1,5 @@
 import { round } from "lodash";
-import { RSSItem } from "./types";
+import { RSSItem } from "../types";
 
 // 计算活跃度
 export function calculateActivityScoreNormalized(

@@ -3,7 +3,7 @@ import logger from "../logger";
 import { calculateActivityScoreNormalized } from "./recommend";
 import { fetchMetadata } from "./request";
 import { isValidRSSLink, parseRSS } from "./rss";
-import { ExternalSource } from "./types";
+import { ExternalSource } from "../types";
 import { retry } from "./util";
 
 const COSNTANT_WEITGHT_LIST = {
