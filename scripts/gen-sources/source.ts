@@ -5,6 +5,7 @@ import { fetchMetadata } from "./request";
 import { isValidRSSLink, parseRSS } from "./rss";
 import { ExternalSource } from "../types";
 import { retry } from "../util";
+import { omit } from "lodash";
 
 const limit = pLimit(10);
 
@@ -28,7 +29,7 @@ export async function generateSource(url: string, defaultTags?: string[]): Promi
   const sourceUrl = feed.link;
   const description = feed.description ?? "";
 
-  logger.info(`parsed content: ${feed.link}`);
+  logger.info(omit(feed, ["items"]), `parsed content:`);
 
   logger.info("====== start to compute activity ======");
   // 计算权重、活跃度等指标
@@ -46,8 +47,12 @@ export async function generateSource(url: string, defaultTags?: string[]): Promi
   logger.info(`weight: ${weight}`);
 
   logger.info("====== start to fetch metadata ======");
+
   // 抓取favicon
-  const metadata = await fetchMetadata(sourceUrl);
+  const metadata = await fetchMetadata(sourceUrl).catch((err) => {
+    logger.error(err.message);
+    return undefined;
+  });
   logger.info(metadata, "metadata:");
 
   // TODO: gpt 输出 tags
@@ -59,7 +64,7 @@ export async function generateSource(url: string, defaultTags?: string[]): Promi
     url: sourceUrl,
     rssLink: url,
     title: sourceTitle,
-    favicon: metadata.favicon,
+    favicon: metadata?.favicon,
     weight,
     activeStatus,
     activeScore,

@@ -7,14 +7,10 @@ const parser = new Parser({
   requestOptions: {
     agent: createAgent(),
     timeout: 30 * 1000,
-    // headers: {
-    //   "User-Agent":
-    //     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
-    // },
   },
 });
 
-export function parseRSS(url: string): Promise<RawFeed> {
+export async function parseRSS(url: string): Promise<RawFeed> {
   return parser.parseURL(url) as Promise<RawFeed>;
 }
 

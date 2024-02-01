@@ -19,7 +19,7 @@ export async function request(url: URL | string, options?: RequestInit, timeout?
       .then((res) => {
         // 若res.ok 为 false
         if (!res.ok) {
-          throw new Error(`Request failed with status code ${res.status}: ${res.statusText}`);
+          throw new Error(`Request ${url} failed with status code ${res.status}: ${res.statusText}`);
         }
 
         return res;
@@ -37,7 +37,7 @@ export async function request(url: URL | string, options?: RequestInit, timeout?
 
 export async function fetchHeadContent(url: string): Promise<string | null> {
   const response = await request(url).catch((err) => {
-    logger.error(err.message, "fetchHeadContent error");
+    logger.error(`fetchHeadContent error: ${err.message}`);
     throw err;
   });
 
@@ -46,8 +46,6 @@ export async function fetchHeadContent(url: string): Promise<string | null> {
     console.log("Response is not HTML text");
     return null;
   }
-
-  console.log("fff");
 
   return new Promise((resolve, reject) => {
     let content = "";

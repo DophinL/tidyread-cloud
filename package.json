@@ -12,6 +12,7 @@
     "gen-tags": "env-cmd tsx scripts/gen-tags.ts && eslint --fix 'data/rss.json'",
     "lint-fix-scripts": "eslint --fix 'scripts/**/*.{js,jsx,ts,tsx}'",
     "lint-fix-all": "next lint --fix",
+    "test": "tsx scripts/test.ts",
     "postbuild": "echo 'testlzyzy' && next-sitemap && rm -rf .next/cache"
   },
   "repository": {
