@@ -171,7 +171,7 @@
     "activeStatus": "active",
     "activeScore": 69.56,
     "description": "",
-    "tags": []
+    "tags": ["Social Media"]
   },
   {
     "available": true,
@@ -183,7 +183,7 @@
     "activeStatus": "active",
     "activeScore": 41.67,
     "description": "Top news and commentary for technology's leaders, from all around the web",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -195,7 +195,7 @@
     "activeStatus": "active",
     "activeScore": 100,
     "description": "",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -207,7 +207,7 @@
     "activeStatus": "active",
     "activeScore": 69.44,
     "description": "CNET news editors and reporters provide top technology news, with investigative reporting and in-depth coverage of tech issues and events.",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -219,7 +219,7 @@
     "activeStatus": "active",
     "activeScore": 27.78,
     "description": "",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -231,7 +231,7 @@
     "activeStatus": "active",
     "activeScore": 55.56,
     "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -243,7 +243,7 @@
     "activeStatus": "active",
     "activeScore": 100,
     "description": "The latest from www.wired.com",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -255,7 +255,7 @@
     "activeStatus": "active",
     "activeScore": 69.44,
     "description": "BBC News - Technology",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -267,7 +267,7 @@
     "activeStatus": "active",
     "activeScore": 100,
     "description": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -279,7 +279,7 @@
     "activeStatus": "active",
     "activeScore": 100,
     "description": "Hacking and computer security. Read today's research news on hacking and protecting against codebreakers. New software, secure data sharing, and more.",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -291,7 +291,7 @@
     "activeStatus": "active",
     "activeScore": 55.56,
     "description": "ComputerWeekly’s best articles of the day",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -303,7 +303,7 @@
     "activeStatus": "active",
     "activeScore": 55.56,
     "description": "Most recent news",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -315,7 +315,7 @@
     "activeStatus": "active",
     "activeScore": 100,
     "description": "The Future Is Here",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -327,7 +327,7 @@
     "activeStatus": "active",
     "activeScore": 83.33,
     "description": "This channel features the latest computer hardware related articles.",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -339,7 +339,7 @@
     "activeStatus": "active",
     "activeScore": 41.67,
     "description": "News for nerds, stuff that matters",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -351,7 +351,7 @@
     "activeStatus": "active",
     "activeScore": 44.44,
     "description": "  ",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -363,7 +363,7 @@
     "activeStatus": "active",
     "activeScore": 83.33,
     "description": "Tech News, Reviews, Deals, and How-To's",
-    "tags": []
+    "tags": ["Technology"]
   },
   {
     "available": true,
@@ -375,6 +375,6 @@
     "activeStatus": "active",
     "activeScore": 100,
     "description": "",
-    "tags": []
+    "tags": ["Product"]
   }
 ]
