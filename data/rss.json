@@ -12,7 +12,8 @@
         "rssLink": "https://www.producthunt.com/feed",
         "tags": ["Product"],
         "favicon": "https://www.phdeck.com/favicon.ico",
-        "description": "A more efficient way to browse Product Hunt"
+        "description": "A more efficient way to browse Product Hunt",
+        "weight": 99
     },
     {
         "rssLink": "https://rsshub.app/ainvest/article",
@@ -43,9 +44,9 @@
         "favicon": "https://www.businessinsider.com/public/assets/BI/US/favicons/apple-touch-icon-192x192.png?v=2023-11"
     },
     {
-        "timeSpan": "1",
         "tags": ["Finance"],
         "url": "https://www.economist.com/",
+        "rssLink": "https://rsshub.app/economist/latest",
         "title": "The Economist",
         "favicon": "https://www.economist.com/favicon.ico"
     },

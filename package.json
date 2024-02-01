@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "i18n": "tsx scripts/i18n.ts",
+    "gen-sources": "tsx scripts/gen-sources.ts",
+    "supply-sources": "tsx scripts/supply-sources.ts",
     "postbuild": "echo 'testlzyzy' && next-sitemap && rm -rf .next/cache"
   },
   "repository": {

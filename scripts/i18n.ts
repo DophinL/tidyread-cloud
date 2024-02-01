@@ -1,3 +1,6 @@
+/**
+ * 该脚本用于将pages目录下的无i18n标识的mdx文件复制一份，重命名为en-US和zh-CN，减少重复工作
+ */
 import * as fs from "fs";
 import * as path from "path";
 
