@@ -1,3 +1,5 @@
+export const HTTP_PROXY = "http://127.0.0.1:33210";
+
 export const CATEGORIES = [
   { value: "AI", emoji: "✨", weight: 100 },
   { value: "Arts", emoji: "🎨" },

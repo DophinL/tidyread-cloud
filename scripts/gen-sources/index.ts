@@ -14,7 +14,7 @@ async function main() {
   // 解析 local.rss.yaml
   const yamlContent = await fs.readFile(localRSSYamlPath, "utf8"); // 调整为正确的路径
   const urls = yaml.parse(yamlContent);
-  console.info(urls, "yaml parsed urls:");
+  logger.info(urls, "yaml parsed urls:");
 
   // 读取 local.sources.json 中已经存在的source
   let existingSources;

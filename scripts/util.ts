@@ -1,8 +1,7 @@
-import { exec } from "child_process";
-import dayjs from "dayjs";
 import { HttpsProxyAgent } from "https-proxy-agent";
 import { omit } from "lodash";
 import validator from "validator";
+import { HTTP_PROXY } from "./const";
 
 export function isURL(str?: string): boolean {
   return str ? validator.isURL(str) : false;
@@ -106,5 +105,5 @@ export const silent = <T>(fn: () => T): T | null => {
 };
 
 export function createAgent() {
-  return new HttpsProxyAgent("http://127.0.0.1:33210");
+  return new HttpsProxyAgent(HTTP_PROXY);
 }

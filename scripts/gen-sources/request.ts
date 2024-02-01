@@ -1,6 +1,7 @@
 import fetch, { RequestInit } from "node-fetch";
 import { createAgent, withTimeout } from "../util";
 import { load } from "cheerio";
+import logger from "../logger";
 
 interface Metadata {
   title: string;
@@ -35,13 +36,18 @@ export async function request(url: URL | string, options?: RequestInit, timeout?
 }
 
 export async function fetchHeadContent(url: string): Promise<string | null> {
-  const response = await request(url);
+  const response = await request(url).catch((err) => {
+    logger.error(err.message, "fetchHeadContent error");
+    throw err;
+  });
 
   // 确保响应是文本类型
   if (!response.headers.get("content-type")?.includes("text/html")) {
     console.log("Response is not HTML text");
     return null;
   }
+
+  console.log("fff");
 
   return new Promise((resolve, reject) => {
     let content = "";

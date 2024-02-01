@@ -4,7 +4,7 @@
 import pLimit from "p-limit";
 import fs from "fs/promises";
 import { MoonshotProvider } from "./ai-providers/moonshot";
-import { PLAIN_CATEGORIES } from "./const";
+import { HTTP_PROXY, PLAIN_CATEGORIES } from "./const";
 import { ExternalSource } from "./types";
 import sources from "../data/rss.json";
 import { retry } from "./util";
@@ -25,7 +25,7 @@ const provider = new MoonshotProvider({
   apiKey: process.env.MOONSHOT_API_KEY,
   apiModel: "moonshot-v1-32k",
   // maxTokens: 100,
-  httpProxy: "http://127.0.0.1:33210",
+  httpProxy: HTTP_PROXY,
 });
 
 async function genTags(source: ExternalSource): Promise<string[]> {
