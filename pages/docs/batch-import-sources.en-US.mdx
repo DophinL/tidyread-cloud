@@ -20,13 +20,14 @@ After copying the exported data into the textarea, use `cmd + Enter` to save:
 
 ## Manual Entry for Import
 
-Normally, reading sources are entered through the `Add Source` form. If you find this cumbersome and want to import in bulk, you can refer to the following type. Content written in the textarea needs to conform to `Source[]` (it must be an array):
+Normally, reading sources are entered through the `Add Source` form. If you find this cumbersome and want to import in bulk, you can refer to the following type (Question mark represent non-required field). Content written in the textarea needs to conform to `Source[]` (it must be an array):
 
 ```typescript
 export interface Source {
     url: string;
     title: string;
-    schedule: "everyday" | "custom";
+    // default is "everyday"
+    schedule?: "everyday" | "custom";
     customDays?: (
         | "Mondy"
         | "Tuesday"
@@ -37,9 +38,9 @@ export interface Source {
         | "Sunday"
     )[];
     rssLink?: string;
-    // Time span of the content pulled by rss, default is 1, means one day
+    // Time span of the content pulled by rss, default is "1", means one day
     timeSpan?: string;
-    tags: string[];
+    tags?: string[];
     // favicon url
     favicon?: string;
 }

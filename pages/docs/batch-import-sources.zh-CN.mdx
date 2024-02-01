@@ -20,13 +20,14 @@ import { Callout } from "nextra/components";
 
 ## 直接手写导入
 
-正常情况下录入阅读源是通过 `Add Source` 表单。如果你嫌麻烦，也想批量导入，可以参考以下类型，在文本框中填写的内容符合 `Source[]`（需要是一个数组） 即可：
+正常情况下录入阅读源是通过 `Add Source` 表单。如果你嫌麻烦，也想批量导入，可以参考以下类型（问号代表非必填），在文本框中填写的内容符合 `Source[]`（需要是一个数组） 即可：
 
 ```typescript
 export interface Source {
     url: string;
     title: string;
-    schedule: "everyday" | "custom";
+    // default is "everyday"
+    schedule?: "everyday" | "custom";
     customDays?: (
         | "Mondy"
         | "Tuesday"
@@ -37,9 +38,9 @@ export interface Source {
         | "Sunday"
     )[];
     rssLink?: string;
-    // Time span of the content pulled by rss, default is 1, means one day
+    // Time span of the content pulled by rss, default is "1", means one day
     timeSpan?: string;
-    tags: string[];
+    tags?: string[];
     // favicon url
     favicon?: string;
 }
