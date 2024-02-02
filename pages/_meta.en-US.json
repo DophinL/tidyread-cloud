@@ -8,6 +8,10 @@
     "title":"Docs",
     "type": "page"
   },
+  "changelog": {
+    "title":"Changelog✨",
+    "type": "page"
+  },
   "buycoffee": {
     "title":"Buy me a coffee ↗",
     "type": "page",

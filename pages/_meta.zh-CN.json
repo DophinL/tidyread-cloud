@@ -8,6 +8,10 @@
     "title":"帮助文档",
     "type": "page"
   },
+  "changelog": {
+    "title":"更新日志✨",
+    "type": "page"
+  },
   "buycoffee": {
     "title":"请我喝咖啡 ↗",
     "type": "page",
