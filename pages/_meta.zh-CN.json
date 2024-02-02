@@ -26,8 +26,7 @@
   },
   "about": {
     "title": "关于",
-    "type": "page",
-    "display": "hidden"
+    "type": "page"
   },
   "another": {
     "display": "hidden"
