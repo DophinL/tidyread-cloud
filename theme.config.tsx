@@ -7,7 +7,7 @@ import { genUseTranslation } from "./lib/translation";
 
 const useTranslation = genUseTranslation({
   "en-US": {
-    text: "💡 Searching RSS feeds and generating digests in the background are coming soon (currently under review). Click to view details. →",
+    text: "💡 Searching RSS feeds and generating digests in the background are coming soon (currently under review). Click to view details →",
   },
   "zh-CN": {
     text: "💡 搜索RSS和后台生成简报功能即将发布（审核中），点击查看详情（附带微信群二维码）→",
