@@ -6,8 +6,8 @@ import Effect from "./Effect";
 import BlueButton from "@/components/BlueButton";
 
 export const metadata: Metadata = {
-  title: "read | Tidyread",
-  description: "read article redirect page",
+  title: "deeplink | Tidyread",
+  description: "deeplink redirect page",
 };
 
 const Page = ({ searchParams }: { searchParams: { [key: string]: string | undefined } }) => {
