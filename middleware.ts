@@ -1,11 +1,15 @@
-import { locales } from 'nextra/locales'
+import { locales } from "nextra/locales";
 
-export const middleware = request => {
-  const { nextUrl } = request
+function startsWithAnyOf(str, prefixes) {
+  return prefixes.some((prefix) => str.startsWith(prefix));
+}
 
-  if (nextUrl.pathname.startsWith('/read')) {
-    return
+export const middleware = (request) => {
+  const { nextUrl } = request;
+
+  if (startsWithAnyOf(nextUrl.pathname, ["/read", "/dl"])) {
+    return;
   }
 
-  return locales(request)
-}
+  return locales(request);
+};
