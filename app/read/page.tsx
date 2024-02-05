@@ -13,7 +13,9 @@ const Page = ({ searchParams }: { searchParams: { [key: string]: string | undefi
 
   return (
     <div className={styles.container}>
-      <Image className="absolute left-6 top-3" src="/images/logo_with_text.svg" alt="" width={148} height={36} />
+      <a href="/">
+        <Image className="absolute left-6 top-3" src="/images/logo_with_text.svg" alt="" width={148} height={36} />
+      </a>
       <h1>Redirecting... </h1>
       <p>Please wait a moment</p>
       <Effect source_link={source_link} rss_link={rss_link} status={status} />
