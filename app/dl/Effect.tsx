@@ -21,9 +21,11 @@ export default function Effect({ link }: { link?: string }) {
       },
     );
 
-    // 这里执行跳转
-    window.location.href = decodedLink;
-    window.close();
+    setTimeout(() => {
+      // 这里执行跳转
+      window.location.href = decodedLink;
+      window.close();
+    }, 300);
   }, [link]);
   return null;
 }
