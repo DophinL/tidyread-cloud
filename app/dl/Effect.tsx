@@ -5,7 +5,7 @@ import { track } from "../../components/TrackProvider";
 export default function Effect({ kw }: { kw?: string }) {
   useEffect(() => {
     if (!kw) {
-      alert("link is required");
+      alert("url query `kw`(keyword) is required");
       return;
     }
 
