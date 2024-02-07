@@ -22,8 +22,11 @@ export default function Effect({ link }: { link?: string }) {
     );
 
     setTimeout(() => {
+      const context = {
+        defaultSearchText: decodedLink,
+      };
       // 这里执行跳转
-      window.location.href = decodedLink;
+      window.location.href = `raycast://extensions/jaredliu233/tidyread---streamline-your-daily-reading/add-source.command?context=${encodeURIComponent(JSON.stringify(context))}`;
       window.close();
     }, 300);
   }, [link]);
