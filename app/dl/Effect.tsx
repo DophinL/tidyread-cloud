@@ -2,19 +2,19 @@
 import { useEffect } from "react";
 import { track } from "../../components/TrackProvider";
 
-export default function Effect({ link }: { link?: string }) {
+export default function Effect({ kw }: { kw?: string }) {
   useEffect(() => {
-    if (!link) {
+    if (!kw) {
       alert("link is required");
       return;
     }
 
-    const decodedLink = decodeURIComponent(link);
+    const decodedKeyword = decodeURIComponent(kw);
 
     track(
       "open-deeplink",
       {
-        link: decodedLink,
+        keyword: decodedKeyword,
       },
       {
         sendInstantly: true,
@@ -23,12 +23,12 @@ export default function Effect({ link }: { link?: string }) {
 
     setTimeout(() => {
       const context = {
-        defaultSearchText: decodedLink,
+        defaultSearchText: decodedKeyword,
       };
       // 这里执行跳转
       window.location.href = `raycast://extensions/jaredliu233/tidyread---streamline-your-daily-reading/add-source.command?context=${encodeURIComponent(JSON.stringify(context))}`;
       window.close();
     }, 300);
-  }, [link]);
+  }, [kw]);
   return null;
 }

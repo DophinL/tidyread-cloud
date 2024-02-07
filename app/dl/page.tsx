@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const Page = ({ searchParams }: { searchParams: { [key: string]: string | undefined } }) => {
-  const { link } = searchParams;
+  const { kw } = searchParams;
 
   return (
     <div className={styles.container}>
@@ -26,7 +26,7 @@ const Page = ({ searchParams }: { searchParams: { [key: string]: string | undefi
       <BlueButton href="https://www.raycast.com/jaredliu233/tidyread---streamline-your-daily-reading">
         Install Tidyread
       </BlueButton>
-      <Effect link={link} />
+      <Effect kw={kw} />
     </div>
   );
 };
