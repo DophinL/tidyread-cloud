@@ -28,7 +28,7 @@ export default function Effect({ kw }: { kw?: string }) {
       // 这里执行跳转
       window.location.href = `raycast://extensions/jaredliu233/tidyread---streamline-your-daily-reading/add-source.command?context=${encodeURIComponent(JSON.stringify(context))}`;
       window.close();
-    }, 300);
+    }, 1000);
   }, [kw]);
   return null;
 }
