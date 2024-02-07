@@ -25,23 +25,6 @@ function BannerText() {
   );
 }
 
-function Head() {
-  return (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-        property="og:description"
-        content="An AI-Powered tool that subscribes to RSS feeds and automatically creates concise digests for efficient information consumption."
-      />
-      <meta
-        property="keywords"
-        content="Tidyread, Raycast, OpenAI, Moonshot, RSS digest, information summary, AI-powered content, news aggregation, efficient reading, personalized news, Docs, Help Center, Support"
-      />
-      <link rel="icon" href="/favicon.svg" />
-    </>
-  );
-}
-
 const config: DocsThemeConfig = {
   darkMode: false,
   i18n: [
@@ -63,7 +46,20 @@ const config: DocsThemeConfig = {
   // chat: {
   //     link: "https://discord.com",
   // },
-  head: <Head />,
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        property="og:description"
+        content="An AI-Powered tool that subscribes to RSS feeds and automatically creates concise digests for efficient information consumption."
+      />
+      <meta
+        property="keywords"
+        content="Tidyread, Raycast, OpenAI, Moonshot, RSS digest, information summary, AI-powered content, news aggregation, efficient reading, personalized news, Docs, Help Center, Support"
+      />
+      <link rel="icon" href="/favicon.svg" />
+    </>
+  ),
   docsRepositoryBase: "https://github.com/DophinL/tidyread-cloud/tree/main",
   // @ts-ignore
   footer: false,

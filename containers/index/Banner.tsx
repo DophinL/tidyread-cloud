@@ -4,16 +4,16 @@ import useLocale from "@/lib/useLocale";
 
 const locales = {
   "en-US": {
-    follow: "Follow along on X(Twitter)",
-    header: "AI-Powered Reading Extension\nInstant Access At Your Fingertips",
+    follow: "Follow along on 𝕏(Twitter)",
+    header: "Master The Info Deluge Delightfully\nAt Your Fingertips, With AI Power.",
     description:
       "A free and open source Raycast Extension for information reading.\nOffering a more controllable, efficient, and organized experience.",
     "get-started": "Get Started",
   },
   "zh-CN": {
-    follow: "在 X(Twitter) 上关注进展",
-    header: "AI驱动的轻量阅读插件\n触指间即可唤起",
-    description: "一款免费且开源的 Raycast 插件\n让资讯阅读更加 可控、高效、有序",
+    follow: "在 𝕏(Twitter) 上关注进展",
+    header: "触指间智驭资讯洪流\n悦读, 不再凌乱",
+    description: "一款免费且开源的 Raycast 插件\nAI驱动，让资讯阅读更加 可控、高效、有序",
     "get-started": "开始使用",
   },
 };
