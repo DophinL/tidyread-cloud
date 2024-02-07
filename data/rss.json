@@ -2232,7 +2232,7 @@
     "activeStatus": "active",
     "activeScore": 13.33,
     "description": "A new newsletter from the folks at Readwise containing the most highlighted content, personalized recommendations, and more.",
-    "tags": []
+    "tags": ["General"]
   },
   {
     "available": true,
@@ -2244,7 +2244,7 @@
     "activeStatus": "active",
     "activeScore": 11.11,
     "description": "",
-    "tags": []
+    "tags": ["General"]
   },
   {
     "available": true,
@@ -2256,6 +2256,6 @@
     "activeStatus": "active",
     "activeScore": 55.56,
     "description": "A new media company built on the ideals that were once the bedrock of American journalism.",
-    "tags": []
+    "tags": ["Politics"]
   }
 ]
