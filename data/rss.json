@@ -2579,5 +2579,29 @@
     "activeScore": 6,
     "description": "For individual investors and financial advisors alike, figuring out the best way to manage money can be a challenge. CNBC has put together these reports to help boost your bottom line.",
     "tags": ["Finance & Economics"]
+  },
+  {
+    "available": true,
+    "url": "https://www.spglobal.com/commodityinsights?src=rssheadlines1",
+    "rssLink": "https://www.spglobal.com/platts/en/rss-feed/natural-gas",
+    "title": "Latest News from S&P Global Commodity Insights",
+    "favicon": "https://www.spglobal.com/commodityinsights/Images/favicon.ico",
+    "weight": 27.78,
+    "activeStatus": "active",
+    "activeScore": 27.78,
+    "description": "Headlines from S&P Global Commodity Insights, a Division of S&P Global, the world's leading provider of energy information.",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "http://www.argusmedia.com/",
+    "rssLink": "https://www.argusmedia.com/pages/NewsRSS.aspx",
+    "title": "Argus Media: Latest Energy News",
+    "favicon": "http://www.argusmedia.com/Media/favicon.png",
+    "weight": 100,
+    "activeStatus": "active",
+    "activeScore": 100,
+    "description": "Argus Media: Latest Energy News",
+    "tags": ["Energy"]
   }
 ]

@@ -26,19 +26,17 @@ async function main() {
   logger.info(urls, "yaml parsed urls:");
 
   // 读取 local.sources.json 中已经存在的source
-  let existingSources;
+  let existingLocalSources;
   try {
     const sourcesJsonContent = await fs.readFile(localSourcesJsonPath, "utf8"); // 调整为正确的路径
-    existingSources = JSON.parse(sourcesJsonContent);
+    existingLocalSources = JSON.parse(sourcesJsonContent);
   } catch (error) {
     // 如果文件不存在，则初始化为空数组
-    existingSources = [];
+    existingLocalSources = [];
   }
 
   // 读取 rss.json 中已经存在的source
-  existingSources = existingSources.concat(rssjson);
-
-  const existingUrls = existingSources.map((source) => source.rssLink);
+  const existingUrls = existingLocalSources.concat(rssjson).map((source) => source.rssLink);
 
   // 过滤掉已经存在的source
   const newUrls = urls.filter((url) => !existingUrls.includes(url));
@@ -53,7 +51,7 @@ async function main() {
   });
 
   // 拿出成功的sources，追加到 local.sources.json 中
-  const updatedSources = existingSources.concat(success);
+  const updatedSources = existingLocalSources.concat(success);
   await fs.writeFile(localSourcesJsonPath, JSON.stringify(updatedSources, null, 2), "utf8"); // 调整为正确的路径
 
   logger.info(
