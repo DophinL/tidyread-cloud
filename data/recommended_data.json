@@ -74,6 +74,13 @@
                 "rssLink": "https://rsshub.app/economist/latest",
                 "title": "The Economist",
                 "favicon": "https://www.economist.com/favicon.ico"
+            },
+            {
+              "url": "https://www.bloomberg.com/feeds/sitemap_news.xml",
+              "rssLink": "https://rsshub.app/bloomberg",
+              "title": "Bloomberg - News",
+              "favicon": "",
+              "tags": ["Finance & Economics"]
             }
         ]
     }
