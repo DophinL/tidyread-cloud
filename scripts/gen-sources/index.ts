@@ -7,6 +7,7 @@ import { generateSources } from "./source"; // 调整为正确的路径
 import logger from "../logger";
 import path from "path";
 import minimist from "minimist";
+import rssjson from "../../data/rss.json";
 
 const localRSSYamlPath = path.join(__dirname, "../../local.rss.yaml");
 const localSourcesJsonPath = path.join(__dirname, "../../local.sources.json");
@@ -33,6 +34,9 @@ async function main() {
     // 如果文件不存在，则初始化为空数组
     existingSources = [];
   }
+
+  // 读取 rss.json 中已经存在的source
+  existingSources = existingSources.concat(rssjson);
 
   const existingUrls = existingSources.map((source) => source.rssLink);
 
