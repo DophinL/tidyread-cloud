@@ -2603,5 +2603,98 @@
     "activeScore": 100,
     "description": "Argus Media: Latest Energy News",
     "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "http://www.eia.gov/pressroom/releases.php",
+    "rssLink": "https://www.eia.gov/rss/press_rss.xml",
+    "title": "EIA: Press Releases",
+    "favicon": "http://www.eia.gov/favicon.ico",
+    "weight": 5.67,
+    "activeStatus": "active",
+    "activeScore": 5.67,
+    "description": "Press Releases from the Energy Information Administration",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "http://www.eia.gov/todayinenergy",
+    "rssLink": "https://www.eia.gov/rss/todayinenergy.xml",
+    "title": "EIA: Today in Energy",
+    "favicon": "http://www.eia.gov/favicon.ico",
+    "weight": 13.89,
+    "activeStatus": "active",
+    "activeScore": 13.89,
+    "description": "Short, timely articles with graphics on energy facts, issues, and trends.",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "https://www.energymonitor.ai/",
+    "rssLink": "https://www.energymonitor.ai/feed/",
+    "title": "Energy Monitor",
+    "weight": 27.78,
+    "activeStatus": "active",
+    "activeScore": 27.78,
+    "description": "Inside the global transition to net zero",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "https://www.breakwaveadvisors.com/insights/",
+    "rssLink": "https://www.breakwaveadvisors.com/insights?format=rss",
+    "title": "Insights - Breakwave Advisors",
+    "favicon": "https://images.squarespace-cdn.com/content/v1/5a4d1d26e5dd5b537a6647c5/ff930f4d-c55f-47bc-9164-000c1ab5d5de/favicon.ico?format=100w",
+    "weight": 55.56,
+    "activeStatus": "active",
+    "activeScore": 55.56,
+    "description": "",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "https://public.axsmarine.com/",
+    "rssLink": "https://public.axsmarine.com/feed",
+    "title": "AXSMarine",
+    "weight": 9.11,
+    "activeStatus": "active",
+    "activeScore": 9.11,
+    "description": "",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "https://public.axsmarine.com/blog/category/axsnews",
+    "rssLink": "https://public.axsmarine.com/blog/category/axsnews/feed",
+    "title": "AXSNews Archives - AXSMarine",
+    "favicon": "https://public.axsmarine.com/wp-content/uploads/2023/11/AXSLogo-patchhome.svg",
+    "weight": 6,
+    "activeStatus": "active",
+    "activeScore": 6,
+    "description": "",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "https://thecoaltrader.com/",
+    "rssLink": "https://thecoaltrader.com/feed/",
+    "title": "The Coal Trader",
+    "favicon": "https://thecoaltrader.com/wp-content/uploads/2022/07/depositphotos_67634571-stock-illustration-a-tower-for-coal-mining-100x100.jpg",
+    "weight": 27.78,
+    "activeStatus": "active",
+    "activeScore": 27.78,
+    "description": "Coal Stock Investing & Trading",
+    "tags": ["Energy"]
+  },
+  {
+    "available": true,
+    "url": "https://www.carbonbrief.org/",
+    "rssLink": "https://www.carbonbrief.org/feed",
+    "title": "Carbon Brief",
+    "weight": 27.78,
+    "activeStatus": "active",
+    "activeScore": 27.78,
+    "description": "Clear on climate",
+    "tags": ["Energy"]
   }
 ]

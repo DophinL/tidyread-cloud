@@ -4,6 +4,9 @@ import { createAgent, isURL } from "../util";
 import { RawFeed } from "../types";
 
 const parser = new Parser({
+  headers: {
+    Accept: "application/rss+xml, application/xml, text/xml",
+  },
   requestOptions: {
     agent: createAgent(),
     timeout: 30 * 1000,
