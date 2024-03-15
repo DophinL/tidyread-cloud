@@ -4,13 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import useLocale from "./lib/useLocale";
 import { genUseTranslation } from "./lib/translation";
+import Logo from "./components/Logo";
 
 const useTranslation = genUseTranslation({
   "en-US": {
-    text: "💡 Searching RSS feeds and generating digests in the background are released now. Click to view details →",
+    text: "💡 The Chrome extension is currently under development and will provide more practical features. Go check it out! 👀 →",
   },
   "zh-CN": {
-    text: "💡 搜索RSS和后台生成简报功能已发布，点击查看详情（附带微信群二维码）→",
+    text: "💡 Chrome 插件正在开发中，会提供更多实用功能。前往查看！👀 →",
   },
 });
 
@@ -18,7 +19,8 @@ function BannerText() {
   const locale = useLocale();
   const { t } = useTranslation();
   return (
-    <Link href={`/${locale}/changelog`}>
+    <Link href={`https://tidyread.ai`} target="_blank">
+      {/* `/${locale}/changelog` */}
       <span className="sm:hidden">{t("text")}</span>
       <span className="hidden sm:inline">{t("text")}</span>
     </Link>
@@ -36,7 +38,7 @@ const config: DocsThemeConfig = {
   },
   logo: (
     <>
-      <Image src="/images/logo_with_text.svg" alt="" width={148} height={36} />
+      <Logo />
       {/* <LocaleSwitch className="ml-5"></LocaleSwitch> */}
     </>
   ),
@@ -51,7 +53,7 @@ const config: DocsThemeConfig = {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
         property="og:description"
-        content="An AI-Powered tool that subscribes to RSS feeds and automatically creates concise digests for efficient information consumption."
+        content="An AI-Powered Raycast Extension that subscribes to RSS feeds and automatically creates concise digests for efficient information consumption."
       />
       <meta
         property="keywords"
@@ -67,7 +69,7 @@ const config: DocsThemeConfig = {
     // const { asPath } = useRouter();
     // if (asPath !== "/") {
     return {
-      titleTemplate: "%s | Tidyread",
+      titleTemplate: "%s | Tidyread Raycast Extension",
     };
     // }
   },

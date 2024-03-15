@@ -8,6 +8,12 @@
     "title":"帮助文档",
     "type": "page"
   },
+  "chrome": {
+    "title":"Chrome 插件👋",
+    "type": "page",
+    "href": "https://tidyread.ai",
+    "newWindow": true
+  },
   "changelog": {
     "title":"更新日志✨",
     "type": "page"

@@ -8,7 +8,7 @@ export function convertObject(obj: any): any {
     return obj;
   }
 
-  if (typeof obj === 'bigint') {
+  if (typeof obj === "bigint") {
     return obj.toString();
   }
 
@@ -16,7 +16,7 @@ export function convertObject(obj: any): any {
     return obj.map((item) => convertObject(item));
   }
 
-  if (typeof obj === 'object') {
+  if (typeof obj === "object") {
     const result: any = {};
 
     for (const key in obj) {

@@ -23,6 +23,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        slab: ["var(--font-slab-serief)"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -8,6 +8,12 @@
     "title":"Docs",
     "type": "page"
   },
+  "chrome": {
+    "title":"Chrome Extension👋",
+    "type": "page",
+    "href": "https://tidyread.ai",
+    "newWindow": true
+  },
   "changelog": {
     "title":"Changelog✨",
     "type": "page"

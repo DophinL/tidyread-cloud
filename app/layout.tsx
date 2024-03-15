@@ -1,5 +1,5 @@
 import { TrackProvider } from "../components/TrackProvider";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Roboto_Slab } from "next/font/google";
 import { cn } from "@/lib/utils";
 // These styles apply to every route in the application
 import "@/lib/globals.css";
@@ -7,6 +7,12 @@ import "@/lib/globals.css";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const slab = Roboto_Slab({
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-slab-serief",
 });
 
 interface RootLayoutProps {
@@ -17,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning className="ph-no-capture h-full">
       <head />
-      <body className={cn("min-h-screen bg-background font-sans antialiased dark", fontSans.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased dark", fontSans.variable, slab.variable)}>
         <TrackProvider
           config={{
             api_key: "phc_a9a12fmYqiXgkcM5rq72c49HBr0Kx5LvE9Zuuv9QOaP",

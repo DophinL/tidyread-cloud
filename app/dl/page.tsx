@@ -1,9 +1,9 @@
 import styles from "./styles.module.css";
 import { Metadata } from "next";
 import { useEffect } from "react";
-import Image from "next/image";
 import Effect from "./Effect";
 import BlueButton from "@/components/BlueButton";
+import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "deeplink | Tidyread",
@@ -16,7 +16,7 @@ const Page = ({ searchParams }: { searchParams: { [key: string]: string | undefi
   return (
     <div className={styles.container}>
       <a href="/">
-        <Image className="absolute left-6 top-3" src="/images/logo_with_text.svg" alt="" width={148} height={36} />
+        <Logo />
       </a>
       <h1>Opening deeplink...</h1>
       <p>Please wait a moment</p>

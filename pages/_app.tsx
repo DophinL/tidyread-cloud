@@ -1,6 +1,14 @@
 import { TrackProvider } from "@/components/TrackProvider";
 import "@/lib/globals.css";
 
+import { Roboto_Slab } from "next/font/google";
+
+const slab = Roboto_Slab({
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-slab-serief",
+});
+
 function MyApp({ Component, pageProps }) {
   return (
     <TrackProvider
@@ -10,7 +18,9 @@ function MyApp({ Component, pageProps }) {
         autocapture: false,
       }}
     >
-      <Component {...pageProps} />
+      <main className={`${slab.variable}`}>
+        <Component {...pageProps} />
+      </main>
     </TrackProvider>
   );
 }
