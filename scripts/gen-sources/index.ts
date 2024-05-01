@@ -36,10 +36,17 @@ async function main() {
   }
 
   // 读取 rss.json 中已经存在的source
-  const existingUrls = existingLocalSources.concat(rssjson).map((source) => source.rssLink);
+  const existingUrls = existingLocalSources
+    .concat(
+      // rssjson
+      [],
+    )
+    .map((source) => source.rssLink);
 
   // 过滤掉已经存在的source
   const newUrls = urls.filter((url) => !existingUrls.includes(url));
+
+  console.log("new Urls", newUrls);
 
   const defaultTags = tags ? tags.split(",") : undefined;
   // 将剩余url进行 generateSources

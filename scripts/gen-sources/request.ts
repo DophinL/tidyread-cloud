@@ -7,6 +7,7 @@ interface Metadata {
   title: string;
   favicon: string;
   coverImageUrl: string;
+  description: string;
 }
 
 // 里面不处理res.json，是因为 fetchHeadContent 会用到原始的response
@@ -96,7 +97,13 @@ export async function fetchMetadata(url: string): Promise<Metadata> {
     coverImageUrl = new URL(coverImageUrl, new URL(url).origin).href;
   }
 
-  console.log(`url: ${url} ; title: ${title}; favicon: ${favicon} ; coverImageUrl: ${coverImageUrl}`);
+  // 获取 description
+  const description =
+    $('meta[name="description"]').attr("content") || $('meta[property="og:description"]').attr("content") || "";
 
-  return { title, favicon, coverImageUrl: coverImageUrl ?? "" };
+  console.log(
+    `url: ${url} ; title: ${title}; description: ${description} ; favicon: ${favicon} ; coverImageUrl: ${coverImageUrl}`,
+  );
+
+  return { title, favicon, coverImageUrl: coverImageUrl ?? "", description };
 }

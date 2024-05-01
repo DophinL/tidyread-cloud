@@ -68,7 +68,7 @@ export async function generateSource(url: string, defaultTags?: string[]): Promi
     weight,
     activeStatus,
     activeScore,
-    description,
+    description: metadata?.description ?? description,
     tags,
   };
 }

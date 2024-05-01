@@ -1,4 +1,4 @@
-export const HTTP_PROXY = "http://127.0.0.1:33210";
+export const HTTP_PROXY = "http://127.0.0.1:7890";
 
 export const CATEGORIES = [
   { value: "Academic", emoji: "🎓", weight: 80 },

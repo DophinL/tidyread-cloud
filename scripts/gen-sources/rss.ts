@@ -5,7 +5,7 @@ import { RawFeed } from "../types";
 
 const parser = new Parser({
   headers: {
-    Accept: "application/rss+xml, application/xml, text/xml",
+    Accept: "application/rss+xml, application/xml, text/xml, application/atom+xml",
   },
   requestOptions: {
     agent: createAgent(),
