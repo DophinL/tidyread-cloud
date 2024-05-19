@@ -8,10 +8,10 @@ import Logo from "./components/Logo";
 
 const useTranslation = genUseTranslation({
   "en-US": {
-    text: "💡 The Chrome extension is currently under development and will provide more practical features. Go check it out! 👀 →",
+    text: "💡 The Chrome extension is currently under beta testing and will provide more practical features. Go check it out! 👀 →",
   },
   "zh-CN": {
-    text: "💡 Chrome 插件正在开发中，会提供更多实用功能。前往查看！👀 →",
+    text: "💡 Chrome 插件正在内测中，会提供更多实用功能。前往查看！👀 →",
   },
 });
 
